@@ -23,7 +23,7 @@
   <p style="font-size: 12px; color: #999;">▲ 点击下方名字展开查看具体 ID</p>
 </div>
 
-<!-- ================= 1-26 (注意所有图片前面都加了 /) ================= -->
+<!-- ================= 1-26 完整列表 ================= -->
 
 <details style="background:#fff; margin-bottom:8px; border-radius:8px;"><summary style="cursor:pointer; padding:12px; font-weight:bold; color:#ff748c;">🍑 1. Airi (爱莉)</summary><div style="padding:10px;"><img src="/Picture/1.jpg" style="width:100%; border-radius:8px;"></div></details>
 
@@ -67,4 +67,4 @@
 
 <details style="background:#fff; margin-bottom:8px; border-radius:8px;"><summary style="cursor:pointer; padding:12px; font-weight:bold; color:#bb88ee;">🎈 21. Rui (类)</summary><div style="padding:10px;"><img src="/Picture/21.jpg" style="width:100%; border-radius:8px;"></div></details>
 
-<details style="background:#fff; margin-bottom:8px; border-radius:8px;"><summary style="c
+<details style="background:#fff; margin-bottom:8px; border-radius:8px;"><summary style="cursor:point
