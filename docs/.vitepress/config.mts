@@ -1,21 +1,19 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Mizuki Bot",
+  title: "Mizuki Bot 帮助文档", // 浏览器标签标题
   description: "专为 PJSK 与 舞萌 DX 玩家打造的贴心助手",
   lang: 'zh-CN',
   
   head: [
-    // 👇 这里改成了 logo.gif，浏览器标签页图标也会动了
     ['link', { rel: 'icon', href: '/Picture/logo.gif' }]
   ],
 
   themeConfig: {
-    // 👇 这里强制使用动图，左上角标题前就是动图
     logo: '/Picture/logo.gif',
-    siteTitle: 'Mizuki Bot',
+    // 👇 标题已修改
+    siteTitle: 'Mizuki Bot 帮助文档',
 
-    // 导航栏
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/usage' },
@@ -31,7 +29,6 @@ export default defineConfig({
       { text: '贡献榜', link: '/contribution' }
     ],
 
-    // 侧边栏
     sidebar: {
       '/': [
         {
