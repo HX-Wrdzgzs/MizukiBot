@@ -6,15 +6,16 @@ export default defineConfig({
   lang: 'zh-CN',
   
   head: [
-    ['link', { rel: 'icon', href: '/Picture/avatar.jpg' }]
+    // 👇 这里改成了 logo.gif，浏览器标签页图标也会动了
+    ['link', { rel: 'icon', href: '/Picture/logo.gif' }]
   ],
 
   themeConfig: {
-    // 👇 这里强制改成 gif，左上角就会动了
+    // 👇 这里强制使用动图，左上角标题前就是动图
     logo: '/Picture/logo.gif',
     siteTitle: 'Mizuki Bot',
 
-    // 导航栏 (无 Emoji)
+    // 导航栏
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/usage' },
@@ -30,7 +31,7 @@ export default defineConfig({
       { text: '贡献榜', link: '/contribution' }
     ],
 
-    // 侧边栏 (无 Emoji)
+    // 侧边栏
     sidebar: {
       '/': [
         {
