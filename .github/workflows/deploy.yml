@@ -1,43 +1,36 @@
 name: Deploy VitePress site to Pages
 
 on:
-  # 监听 main 分支的提交
   push:
     branches: [main]
-
-  # 允许手动触发
   workflow_dispatch:
 
-# 设置权限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 允许并发部署
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  # 构建任务
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 获取所有历史记录，以便 lastUpdated 正常工作
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # 👇👇👇 注意：这里删除了 cache: npm 这一行，防止报错 👇👇👇
 
       - name: Install dependencies
-        # 👇👇👇 重点修改在这里：改成 npm install 👇👇👇
-        run: npm install
+        run: npm install  # 确保这里是 npm install，不是 npm ci
 
       - name: Build with VitePress
         run: npm run docs:build
@@ -45,10 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 告诉 GitHub 你的网站生成在这里
           path: docs/.vitepress/dist
 
-  # 部署任务
   deploy:
     environment:
       name: github-pages
