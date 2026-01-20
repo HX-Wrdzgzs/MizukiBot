@@ -1,86 +1,66 @@
-/* --- 🎨 核心主题色 --- */
 :root {
   --vp-c-brand-1: #E97EB3;
   --vp-c-brand-2: #d66ea3;
   --vp-c-brand-3: #c35e93;
   --vp-c-brand-soft: rgba(233, 126, 179, 0.14);
   --vp-code-block-bg: #f9f0ff;
+  
+  /* 首页大标题渐变 */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #E97EB3 30%, #8A66C2);
 }
 
+/* 深色模式适配 */
+.dark {
+  --vp-code-block-bg: #1e1e1e;
+}
+
 img { border-radius: 12px; }
 
-/* --- ✨ 首页特效 ✨ --- */
+/* --- 首页样式 --- */
 
-/* 1. 渐变大标题 */
 .VPHero .name {
   background: var(--vp-home-hero-name-background);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-bottom: 10px; /* 防止下半部分被切掉 */
+  line-height: 1.2;
 }
 
-/* 2. 随机头像样式 (呼吸光环 + 无边框) */
+/* 随机头像 (放大 + 呼吸光晕) */
 .random-hero-avatar {
-  width: 150px !important;
-  height: 150px !important;
+  width: 220px !important;
+  height: 220px !important;
   border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 60px auto 30px auto;
   
-  /* ❌ 去掉实线边框 */
-  border: none; 
+  /* 初始阴影 */
+  box-shadow: 0 0 20px rgba(233, 126, 179, 0.5);
   
-  /* ✨ 呼吸光环动画 */
-  animation: breathe 4s infinite ease-in-out, floatUp 1s ease-out;
+  /* 呼吸动画 */
+  animation: breathe 3s infinite ease-in-out;
+  transition: transform 0.3s ease;
 }
 
-/* 呼吸动画关键帧 */
+/* 呼吸动画：让光晕变大变亮 */
 @keyframes breathe {
-  0% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 10px rgba(233, 126, 179, 0.4));
-  }
-  50% {
-    transform: scale(1.03); /* 微微放大 */
-    filter: drop-shadow(0 0 25px rgba(233, 126, 179, 0.8)); /* 光晕变强 */
-  }
-  100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 10px rgba(233, 126, 179, 0.4));
-  }
+  0% { box-shadow: 0 0 20px rgba(233, 126, 179, 0.5); }
+  50% { box-shadow: 0 0 50px rgba(233, 126, 179, 0.8); }
+  100% { box-shadow: 0 0 20px rgba(233, 126, 179, 0.5); }
 }
 
-/* 入场浮现动画 */
-@keyframes floatUp {
-  from { opacity: 0; transform: translateY(20px) scale(0.9); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+.random-hero-avatar:hover {
+  transform: scale(1.05);
 }
 
-/* 3. 语录样式 */
 .hero-quote {
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   font-size: 15px;
-  color: #999;
+  color: var(--vp-c-text-2);
   font-style: italic;
   font-weight: 500;
   line-height: 1.6;
-  opacity: 0.9;
-  animation: floatUp 1.2s ease-out; /* 语录也加个入场动画 */
-}
-
-/* 4. 功能卡片美化 */
-.VPFeature {
-  border: 1px solid rgba(233, 126, 179, 0.2) !important;
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  transition: transform 0.3s !important;
-}
-.VPFeature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(233, 126, 179, 0.15) !important;
-  border-color: #E97EB3 !important;
 }
