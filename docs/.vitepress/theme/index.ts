@@ -1,25 +1,27 @@
 import DefaultTheme from 'vitepress/theme'
-import { h, onMounted, ref } from 'vue'
+import { h, onMounted, ref, nextTick } from 'vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   
-  // 使用 Vue 组件的方式定义 Layout
   Layout() {
-    // 1. 定义一个响应式变量，默认显示 avatar.jpg
-    const currentAvatar = ref('/Picture/avatar.jpg')
+    // 1. 定义响应式图片变量 (默认先显示静图)
+    const currentImg = ref('/Picture/avatar.jpg')
 
-    onMounted(() => {
-      // --- 随机头像逻辑 ---
+    onMounted(async () => {
+      // 等待 DOM 彻底渲染
+      await nextTick()
+
+      // --- 🎲 随机图片逻辑 ---
       const images = [
         '/Picture/avatar.jpg',
         '/Picture/logo.gif'
       ];
-      // 这里的 .value 修改会立刻触发页面更新
-      currentAvatar.value = images[Math.floor(Math.random() * images.length)];
+      // 强制更新图片路径
+      currentImg.value = images[Math.floor(Math.random() * images.length)];
 
-      // --- 随机语录逻辑 ---
+      // --- 💬 随机语录逻辑 ---
       const quotes = [
         "「 ボクは……ボクでいたいだけ 」<br>我只是……想做我自己罢了",
         "「 秘密って、なんだかワクワクしない？ 」<br>所谓秘密，不觉得令人有些兴奋吗？",
@@ -31,23 +33,22 @@ export default {
       ];
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
       
-      // 语录替换
-      setTimeout(() => {
-        const tagline = document.querySelector('.VPHero .tagline');
-        if (tagline) {
-          tagline.innerHTML = randomQuote;
-          tagline.classList.add('hero-quote');
-        }
-      }, 50);
+      // 暴力查找并替换 Tagline
+      const tagline = document.querySelector('.VPHero .tagline');
+      if (tagline) {
+        tagline.innerHTML = randomQuote;
+        tagline.classList.add('hero-quote'); // 添加样式类
+        tagline.style.opacity = '1'; // 确保可见
+      }
     })
 
-    // 返回渲染函数
+    // 渲染布局
     return h(DefaultTheme.Layout, null, {
       'home-hero-image': () => {
         return h('div', { class: 'hero-wrapper' }, [
           h('img', { 
-            // 这里的 src 绑定了上面的变量，变量一变，图片立马变
-            src: currentAvatar.value, 
+            // 绑定响应式变量
+            src: currentImg.value, 
             class: 'random-hero-avatar', 
             alt: 'Mizuki Bot Hero'
           })
