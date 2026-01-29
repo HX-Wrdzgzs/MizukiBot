@@ -1,27 +1,36 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  // 1. 网站基础信息
   title: "Mizuki Bot 帮助文档",
   description: "Mizuki Bot 是一款专为 PJSK (Project Sekai) 和 舞萌 DX (Maimai DX) 玩家打造的 QQ 机器人。提供查分、查榜、表情包制作、3D家园资源查询等功能。",
   lang: 'zh-CN',
   
-  // 2. 🔥 开启 Sitemap 自动生成 (SEO 核心)
   sitemap: {
     hostname: 'https://help.mizuki.top'
   },
 
-  // 3. 🔥 SEO 专用标签 (让搜索引擎更容易搜到)
   head: [
+    // 浏览器标签页的小图标
     ['link', { rel: 'icon', href: '/Picture/logo.gif' }],
-    // 关键词：用户可能会搜的词，都在这里写上
+    
+    // --- 👇👇👇 SEO 核心优化：让搜索结果显示图片 👇👇👇 ---
+    // Open Graph (Facebook/Discord/必应预览图)
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { property: 'og:site_name', content: 'Mizuki Bot 帮助文档' }],
+    ['meta', { property: 'og:title', content: 'Mizuki Bot 帮助文档' }],
+    // 这里指定搜索结果显示的图片 (必须是完整链接！)
+    ['meta', { property: 'og:image', content: 'https://help.mizuki.top/Picture/avatar.jpg' }],
+    
+    // Twitter Card (推特/部分搜索引擎预览)
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Mizuki Bot 帮助文档' }],
+    ['meta', { name: 'twitter:image', content: 'https://help.mizuki.top/Picture/avatar.jpg' }],
+    
+    // 关键词
     ['meta', { name: 'keywords', content: 'Mizuki Bot, MizukiBot, PJSK机器人, 舞萌DX查分, Maimai查分, Project Sekai, 世界计划, QQ机器人, 帮助文档, 表情包制作' }],
     ['meta', { name: 'author', content: 'HX-Wrdzgzs' }],
-    // 告诉爬虫：请索引本站
-    ['meta', { name: 'robots', content: 'index, follow' }],
-    // Open Graph (分享到QQ/微信/Discord时显示的预览卡片)
-    ['meta', { property: 'og:title', content: 'Mizuki Bot 帮助文档' }],
-    ['meta', { property: 'og:description', content: 'PJSK 与 舞萌 DX 玩家的一站式助手' }]
+    ['meta', { name: 'robots', content: 'index, follow' }]
   ],
 
   themeConfig: {
