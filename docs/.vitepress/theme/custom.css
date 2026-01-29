@@ -9,25 +9,18 @@
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #E97EB3 30%, #8A66C2);
 }
 
-/* --- 夜间模式适配 --- */
 .dark {
   --vp-code-block-bg: #1e1e1e;
 }
 
-/* 功能卡片在夜间模式变暗 */
+/* 卡片夜间模式修复 */
 .dark .custom-card {
   background-color: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   color: #e0e0e0 !important;
 }
-.dark .custom-card h3, 
-.dark .custom-card h4 {
-  color: #E97EB3 !important;
-}
-.dark .custom-card code {
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  color: #ffadd2 !important;
-}
+.dark .custom-card h3, .dark .custom-card h4 { color: #E97EB3 !important; }
+.dark .custom-card code { background-color: rgba(0, 0, 0, 0.3) !important; color: #ffadd2 !important; }
 
 img { border-radius: 12px; }
 
@@ -44,8 +37,9 @@ img { border-radius: 12px; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 20px;
+  /* 👇 这里的 margin-top 决定头像离顶部的距离，现在设为 60px */
+  margin-top: 60px; 
+  margin-bottom: 30px;
 }
 
 .random-hero-avatar {
@@ -53,42 +47,32 @@ img { border-radius: 12px; }
   height: 220px !important;
   border-radius: 50%;
   object-fit: cover;
-  
-  /* 👇 1. 彻底清除边框和轮廓 👇 */
   border: none !important;
   outline: none !important;
   background: transparent !important;
   
-  /* 👇 2. 使用滤镜投影，而不是盒阴影，效果更柔和 👇 */
-  /* 初始状态 */
+  /* 呼吸光晕 */
   filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5));
-  
   animation: breathe-glow 3s infinite ease-in-out;
   transition: transform 0.3s ease;
 }
 
-/* 👇 3. 新的呼吸动画：只改变光晕，不改变大小 👇 */
 @keyframes breathe-glow {
-  0% {
-    filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5));
-  }
-  50% {
-    /* 光晕扩散到 40px，透明度增加，看起来像在发光 */
-    filter: drop-shadow(0 0 40px rgba(233, 126, 179, 0.9));
-  }
-  100% {
-    filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5));
-  }
+  0% { filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5)); }
+  50% { filter: drop-shadow(0 0 40px rgba(233, 126, 179, 0.9)); }
+  100% { filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5)); }
 }
 
 .random-hero-avatar:hover { transform: scale(1.05); }
 
-.hero-quote {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 15px;
-  color: var(--vp-c-text-2);
+/* 👇 强制修正语录样式，覆盖默认的 Loading 样式 */
+.VPHero .tagline {
+  color: #999 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
   font-style: italic;
   font-weight: 500;
-  line-height: 1.6;
+  text-align: center;
+  white-space: pre-line;
+  margin-top: 10px;
 }
