@@ -4,16 +4,13 @@
   --vp-c-brand-3: #c35e93;
   --vp-c-brand-soft: rgba(233, 126, 179, 0.14);
   --vp-code-block-bg: #f9f0ff;
-  
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #E97EB3 30%, #8A66C2);
 }
 
-.dark {
-  --vp-code-block-bg: #1e1e1e;
-}
+.dark { --vp-code-block-bg: #1e1e1e; }
 
-/* 卡片夜间模式修复 */
+/* 卡片夜间模式 */
 .dark .custom-card {
   background-color: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -33,28 +30,30 @@ img { border-radius: 12px; }
   line-height: 1.2;
 }
 
+/* 👇👇👇 关键：隐藏原来的 tagline (Loading文字) 👇👇👇 */
+.VPHero .tagline {
+  display: none !important;
+}
+
+/* 容器 */
 .hero-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* 👇 这里的 margin-top 决定头像离顶部的距离，现在设为 60px */
-  margin-top: 60px; 
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
+/* 头像 */
 .random-hero-avatar {
   width: 220px !important;
   height: 220px !important;
   border-radius: 50%;
   object-fit: cover;
   border: none !important;
-  outline: none !important;
   background: transparent !important;
-  
-  /* 呼吸光晕 */
   filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5));
   animation: breathe-glow 3s infinite ease-in-out;
-  transition: transform 0.3s ease;
 }
 
 @keyframes breathe-glow {
@@ -63,16 +62,14 @@ img { border-radius: 12px; }
   100% { filter: drop-shadow(0 0 15px rgba(233, 126, 179, 0.5)); }
 }
 
-.random-hero-avatar:hover { transform: scale(1.05); }
-
-/* 👇 强制修正语录样式，覆盖默认的 Loading 样式 */
-.VPHero .tagline {
-  color: #999 !important;
-  font-size: 16px !important;
-  line-height: 1.6 !important;
+/* 👇 新的语录样式 */
+.my-custom-quote {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 15px;
+  color: #999; /* 浅灰色 */
   font-style: italic;
   font-weight: 500;
-  text-align: center;
-  white-space: pre-line;
-  margin-top: 10px;
+  line-height: 1.6;
+  min-height: 24px; /* 占位防止跳动 */
 }
