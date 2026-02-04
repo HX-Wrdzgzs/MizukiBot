@@ -10,7 +10,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    // 👇👇👇 确保这里是 .gif，并且你上传的文件确实会动 👇👇👇
+    // 确保这里是 .gif
     logo: '/Picture/logo.gif',
     siteTitle: 'Mizuki Bot 帮助文档',
 
@@ -34,7 +34,8 @@ export default defineConfig({
         {
           text: '入门指南',
           items: [
-            { text: '如何使用', link: '/usage' }
+            { text: '如何使用', link: '/usage' },
+            { text: '🔗 落雪绑定', link: '/bind' }  // ✅ 新增绑定页
           ]
         },
         {
@@ -47,9 +48,12 @@ export default defineConfig({
           ]
         },
         {
-          text: '关于',
+          text: '关于与规范',  // ✅ 新增分类
           items: [
-            { text: '贡献者与鸣谢', link: '/contribution' }
+            { text: '📋 群规与公告', link: '/rules' },    // ✅ 新增群规
+            { text: '💡 提问的智慧', link: '/asking' },   // ✅ 新增提问
+            { text: '贡献者与鸣谢', link: '/contribution' },
+            { text: '免责声明', link: '/disclaimer' }
           ]
         }
       ]
@@ -61,7 +65,7 @@ export default defineConfig({
 
     footer: {
       message: 'Created with ♿ by HX-Wrdzgzs',
-      copyright: 'Powered by HongXingOS6'
+      copyright: 'Powered by Akaboshi Lab' // ✅ 已更新为 Akaboshi Lab
     },
     
     search: {
