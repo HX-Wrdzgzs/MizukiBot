@@ -29,7 +29,7 @@ const jumpToAuth = () => {
     <input 
       type="number" 
       v-model="qq" 
-      placeholder="例如: 2338680148" 
+      placeholder="例如: 3675727244" 
       class="custom-input"
       @keyup.enter="jumpToAuth"
     />
