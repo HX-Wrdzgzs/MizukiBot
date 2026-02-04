@@ -51,7 +51,3 @@
     * 上传后必须打完一首歌才能生效。
 3.  拉 Bot 进群或有其他不懂的问题，均可咨询群管或群主。
 :::
-
-<style>
-h2 { border-bottom: 1px solid var(--vp-c-divider); padding-bottom: 10px; margin-top: 20px; }
-</style>
