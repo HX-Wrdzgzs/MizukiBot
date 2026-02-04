@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: "Mizuki Bot 帮助文档",
-  description: "专为 PJSK 与 舞萌 DX 玩家打造的bot助手（划掉）",
+  description: "专为 PJSK 与 舞萌 DX 玩家打造的bot助手",
   lang: 'zh-CN',
   
   head: [
@@ -10,9 +10,11 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    // 这里设置网站左上角的小图标
     logo: '/Picture/logo.gif',
     siteTitle: 'Mizuki Bot 帮助文档',
 
+    // 👇 1. 顶部导航栏 (Nav) 配置
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/usage' },
@@ -25,17 +27,25 @@ export default defineConfig({
           { text: '通用工具', link: '/features/tools' }
         ]
       },
-      { text: '贡献榜', link: '/contribution' }
+      // 👇 下滑栏/顶部菜单显示新页面 👇
+      { 
+        text: '关于与规范', 
+        items: [
+           { text: '贡献榜', link: '/contribution' },
+           { text: '群规', link: '/rules' },
+           { text: '提问智慧', link: '/asking' }
+        ]
+      }
     ],
 
-    // 👇👇👇 侧边栏配置 (已按您要求调整顺序) 👇👇👇
+    // 👇 2. 侧边栏 (Sidebar) 配置
     sidebar: {
       '/': [
         {
           text: '入门指南',
           items: [
             { text: '如何使用', link: '/usage' },
-            // ❌ 删除这里的绑定，移到下面
+            { text: '🔗 落雪绑定', link: '/bind' } // ✅ 绑定页在这里
           ]
         },
         {
@@ -48,18 +58,12 @@ export default defineConfig({
           ]
         },
         {
-          text: '关于与绑定', // 这里的分类名改了一下
+          text: '关于与规范',
           items: [
-            { text: '🔗 落雪绑定', link: '/bind' },          // 1. 绑定在最前
-            { text: '👥 贡献者与鸣谢', link: '/contribution' },// 2. 贡献在中间
-          ]
-        },
-        {
-          text: '社区规范',
-          items: [
-             { text: '📋 群规与公告', link: '/rules' },       // 3. 群规在贡献后
-             { text: '💡 提问的智慧', link: '/asking' },      // 4. 提问在贡献后
-             { text: '⚖️ 免责声明', link: '/disclaimer' }
+            { text: '👥 贡献者与鸣谢', link: '/contribution' },
+            { text: '📋 群规与公告', link: '/rules' }, // ✅ 群规页
+            { text: '💡 提问的智慧', link: '/asking' }, // ✅ 提问页
+            { text: '⚖️ 免责声明', link: '/disclaimer' }
           ]
         }
       ]
