@@ -37,20 +37,8 @@
 
 <br>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-<h3 style="margin-top: 0; color: #1890ff;">舞萌服务器状态</h3>
-<p style="font-size: 13px; opacity: 0.8; line-height: 1.6;">
-获取 Milk/Chongxi/DLX/华立 代理服务器实时状态。<br>
-<strong>指令：</strong> <code>mai状态</code> / <code>看看dlx</code> / <code>看看华立</code>
-</p>
-<a href="https://status.mizuki.top" target="_blank" style="display: inline-block; margin-top: 10px; color: #1890ff; font-weight: bold; font-size: 13px;">
-👉 访问 status.mizuki.top 查看网页版状态
-</a>
-</div>
+## 🟠 骚话模式 (娱乐)
 
-<br>
-
-## 🟠 骚话模式
 > 仅供娱乐，切勿当真
 
 * “xxmai什么” (例: `柚子mai什么`)
@@ -60,28 +48,30 @@
 
 <br>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border: 2px solid #ff4d4f; padding: 25px; border-radius: 15px; margin-top: 30px;">
-<h3 style="margin-top: 0; color: #ff4d4f;">成绩同步助手 (Sync)</h3>
-<p style="font-size: 13px; opacity: 0.8; margin-bottom: 20px;">
-协助将街机端游玩记录同步至查分器 (水鱼/落雪)。<br>
-<span style="color:#ff4d4f;">⚠️ 维护时间: 00:00-11:00 暂停服务</span>
-</p>
+## 🖥️ 舞萌服务器状态
+> 获取 Milk/Chongxi/DLX/华立 代理服务器实时状态。
 
-**1. 设置与绑定**
+* 指令: `mai状态` / `看看dlx` / `看看华立`
+* [👉 点击访问 status.mizuki.top 查看网页版状态](https://status.mizuki.top)
+
+<br>
+
+## 🔄 成绩同步助手 (Sync)
+
+> 协助将街机端游玩记录同步至查分器 (水鱼/落雪)。
+> **⚠️ 维护时间: 每日 00:00-11:00 暂停服务**
+
+### 1. 设置与绑定
 * `设置类型 1`：仅上传成绩
 * `设置类型 2`：上传后自动登出 (传占位曲)
-* `绑定水鱼 [Token]` / `绑定落雪`
+* `绑定水鱼 [Token]`
+* `绑定落雪`
 
-**2. 同步与查询**
+### 2. 同步与查询
 * `上传成绩`：发送后发二维码
 * `预览mai`：查询游戏账号基本信息
 
-**3. 队列与管理**
+### 3. 队列与管理
 * `队列状态` / `登出` / `查看绑定`
 
-<div style="margin-top: 20px; text-align: center;">
-<a href="/disclaimer" style="display: inline-block; border: 1px solid #ff4d4f; color: #ff4d4f; padding: 8px 25px; border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: bold; transition: all 0.3s;">
-阅读服务条款与免责声明 ->
-</a>
-</div>
-</div>
+> [阅读服务条款与免责声明 ->](/disclaimer)
