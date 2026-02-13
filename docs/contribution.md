@@ -3,6 +3,7 @@
 <br>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); padding: 20px; border-radius: 15px;">
+
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
 
   <div class="custom-card" style="background: var(--vp-c-bg); border-radius: 10px; padding: 20px 10px; width: 46%; min-width: 130px; max-width: 200px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-grow: 1;">
@@ -27,10 +28,17 @@
   </div>
 
   <div class="custom-card" style="background: var(--vp-c-bg); border-radius: 10px; padding: 20px 10px; width: 46%; min-width: 130px; max-width: 200px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-grow: 1;">
-    <img src="/Picture/ecomter.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid #ccc; object-fit: cover; margin: 0 auto;">
-    <h4 style="margin: 10px 0 5px; font-size: 1rem;">同道中人</h4>
-    <span style="font-size: 12px; opacity: 0.6; font-weight: bold; display:block; margin-bottom: 5px;">软硬件支持</span>
-    <details style="font-size: 12px; opacity: 0.8;"><summary>介绍</summary><p>协助维护底层设施</p></details>
+    <img src="/Picture/HZK_CN.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid #faad14; object-fit: cover; margin: 0 auto;">
+    <h4 style="margin: 10px 0 5px; font-size: 1rem;">HZK_CN</h4>
+    <span style="font-size: 12px; color: #faad14; font-weight: bold; display:block; margin-bottom: 5px;">开发顾问</span>
+    <details style="font-size: 12px; opacity: 0.8;"><summary>介绍</summary><p>提供 Bot 开发思路</p></details>
+  </div>
+
+  <div class="custom-card" style="background: var(--vp-c-bg); border-radius: 10px; padding: 20px 10px; width: 46%; min-width: 130px; max-width: 200px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-grow: 1;">
+    <img src="/Picture/MC_FanBuFan.jpg" style="width: 70px; height: 70px; border-radius: 50%; border: 2px solid #52c41a; object-fit: cover; margin: 0 auto;">
+    <h4 style="margin: 10px 0 5px; font-size: 1rem;">MC_FanBuFan</h4>
+    <span style="font-size: 12px; color: #52c41a; font-weight: bold; display:block; margin-bottom: 5px;">开发顾问</span>
+    <details style="font-size: 12px; opacity: 0.8;"><summary>介绍</summary><p>提供开发思路<br>给出建议与及时反馈</p></details>
   </div>
 
   <div class="custom-card" style="background: var(--vp-c-bg); border-radius: 10px; padding: 20px 10px; width: 46%; min-width: 130px; max-width: 200px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex-grow: 1;">
@@ -51,7 +59,8 @@
 * **网站设计**: Te:River / HX-Wrdzgzs
 * **美术设计**: uni_mayu (Logo) / HX-Wrdzgzs (UI) / m (Bot头像)
 * **数据支持**: Te:River
-* **软硬件支持**: 同道中人 / Sirius / HX-Wrdzgzs / ecomter
+* **软硬件支持**: 同道中人 / Sirius / HX-Wrdzgzs
+* **特别鸣谢**: HZK_CN / MC_FanBuFan
 * <small>*排名不分前后*</small>
 
 <br>
