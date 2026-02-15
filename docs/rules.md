@@ -3,12 +3,17 @@
 <br>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #1890ff;">🤖 Bot 使用指南</h3>
+  <h3 style="margin-top: 0; color: #1890ff;">🤖 Bot 账号列表</h3>
+  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 10px;">请认准以下官方账号，谨防假冒。</p>
   
-| 项目 | 内容 |
+| 机号 | QQ 号 |
 | :--- | :--- |
-| **主 Bot** | `Mizuki Bot` (2239463224) |
-| **备用 Bot** | `[备用]Mizuki Bot` (3675727244) |
+| **1号机** | `3986839028` |
+| **2号机** | `1005524479` |
+| **3号机** | `3947949425` |
+| **4号机** | `3925294264` |
+| **5号机** | `3904382316` |
+| **6号机** | `3675727244` |
 | **文档网址** | [help.mizuki.top](https://help.mizuki.top) |
 
   <div style="background:rgba(255, 77, 79, 0.1); padding:10px; border-radius:8px; margin-top:15px;">
