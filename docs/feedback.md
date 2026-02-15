@@ -1,0 +1,17 @@
+# 📝 问题反馈
+
+> 遇到 Bug 或有新功能建议？欢迎填写反馈表！
+
+<br>
+
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border: 2px solid #1890ff; padding: 30px; border-radius: 15px; text-align: center;">
+  <h3 style="color: #1890ff; margin-top:0;">📋 飞书反馈表单</h3>
+  <p style="opacity: 0.8; margin-bottom: 20px;">
+    点击下方按钮跳转至飞书表格进行填写。<br>
+    请详细描述您遇到的问题，以便我们更快修复。
+  </p>
+  
+  <a href="https://wrdzgzs2024.feishu.cn/share/base/form/shrcnAK9hJGLF40ga1frnQo7XLg" target="_blank" style="display: inline-block; background: #1890ff; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; transition: opacity 0.2s;">
+    🚀 点击前往填写反馈
+  </a>
+</div>
