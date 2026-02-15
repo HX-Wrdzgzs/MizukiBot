@@ -2,30 +2,28 @@
 import { ref } from 'vue'
 
 const qq = ref('')
-
-// 基础链接
 const baseUrl = "https://maimai.lxns.net/oauth/authorize?client_id=6b98af53-7b95-4a84-9198-6d2a8db0ac47&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=read_player+write_player&state="
 
-// 跳转函数
 const jumpToAuth = () => {
   if (!qq.value) {
     alert('请先输入您的 QQ 号！')
     return
   }
-  // 拼接最终链接
   const finalUrl = baseUrl + qq.value
-  // 在新标签页打开
   window.open(finalUrl, '_blank')
 }
 </script>
 
 # 🔗 落雪查分器绑定
 
-> 请输入您的 QQ 号，点击按钮跳转至落雪 (LXNS) 授权页面。
+<br>
 
-<div class="bind-wrapper">
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 30px; border-radius: 15px;">
+  <h3 style="margin-top: 0; color: #1890ff;">🚀 绑定流程</h3>
+  <p style="opacity: 0.8; margin-bottom: 20px;">请输入您的 QQ 号，点击按钮跳转至落雪 (LXNS) 授权页面。</p>
+
   <div class="input-group">
-    <label>您的 QQ 号：</label>
+    <label style="font-weight:bold; display:block; margin-bottom:8px;">您的 QQ 号：</label>
     <input 
       type="number" 
       v-model="qq" 
@@ -36,36 +34,20 @@ const jumpToAuth = () => {
   </div>
 
   <button @click="jumpToAuth" class="action-button">
-    🚀 跳转并获取授权代码
+    跳转并获取授权代码
   </button>
 
-  <div class="tips">
-    <p><strong>⚠️ 授权后操作说明：</strong></p>
-    <p style="color: #ff4d4f; font-weight: bold; margin-top: 5px;">
-      获取到授权码后，请回到群里艾特机器人发送！
-    </p>
-    <div style="background: rgba(0,0,0,0.05); padding: 10px; border-radius: 6px; margin-top: 8px;">
-      <code>@Mizuki Bot 落雪确认 [授权码]</code>
+  <div style="margin-top: 25px; padding-top: 20px; border-top: 1px dashed #ccc;">
+    <p><strong>⚠️ 获取授权码后：</strong></p>
+    <p style="font-size: 13px; opacity: 0.8;">请回到 Bot 聊天窗口 (群聊或私聊)，发送以下指令：</p>
+    <div style="background: var(--vp-c-bg); padding: 10px; border-radius: 6px; margin-top: 8px; font-family: monospace; color: #ff4d4f;">
+      @Mizuki Bot 落雪确认 [授权码]
     </div>
   </div>
 </div>
 
 <style>
-.bind-wrapper {
-  margin-top: 30px;
-  padding: 30px;
-  background: var(--vp-c-bg-soft);
-  border-radius: 12px;
-  border: 1px solid var(--vp-c-divider);
-}
-
-.input-group {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+.input-group { margin-bottom: 20px; }
 .custom-input {
   padding: 12px;
   border-radius: 8px;
@@ -74,9 +56,8 @@ const jumpToAuth = () => {
   color: var(--vp-c-text-1);
   font-size: 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%; /* 手机端撑满 */
 }
-
 .action-button {
   background-color: #1890ff;
   color: white;
@@ -85,19 +66,8 @@ const jumpToAuth = () => {
   font-weight: bold;
   cursor: pointer;
   border: none;
+  width: 100%;
   transition: opacity 0.2s;
-  width: 100%; /* 手机上按钮撑满更好看 */
 }
-
-.action-button:hover {
-  opacity: 0.8;
-}
-
-.tips {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px dashed var(--vp-c-divider);
-  font-size: 14px;
-  opacity: 0.9;
-}
+.action-button:hover { opacity: 0.8; }
 </style>
