@@ -5,13 +5,11 @@ hero:
   name: "Mizuki Bot 帮助文档"
   text: ""
   tagline: "Loading..."
-  # ❌ 绝对不要在这里写 image: xxx
-  # ✅ 留空！让 index.ts 代码自动生成随机头像
   
   actions:
     - theme: brand
-      text: 🚀 快速开始
-      link: /usage
+      text: 📝 问题反馈
+      link: /feedback
     - theme: alt
       text: 🎵 PJSK 功能
       link: /features/pjsk
