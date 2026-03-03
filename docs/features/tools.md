@@ -1,6 +1,6 @@
 # 通用工具与娱乐
 
-> 包含表情包管理、经济系统、生成器、Minecraft 及 Steam 等综合功能。
+> 包含表情包管理、经济系统、生成器、Minecraft 及 B 站动态订阅等综合功能。
 
 <br>
 
@@ -82,28 +82,15 @@
 
 </div>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #66c0f4; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #66c0f4;">🎮 Steam 工具</h3>
-  
-| 指令 | 说明 |
-| :--- | :--- |
-| `steam绑定 [ID]` | 绑定 Steam ID |
-| `steam播报开启` | 开启群内折扣播报 |
-| `steam喜加一` | 查询限时免费游戏 |
-
-</div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #fb7299; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #fb7299;">📺 B站动态订阅</h3>
-  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">支持自动推送官方最新 B 站动态至群聊。</p>
+  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">支持自动推送官方最新 B 站动态至群聊，<strong>目前需提供群号并联系管理员手动添加。</strong></p>
 
-  <ul style="margin:0 0 15px 20px; font-size:14px; opacity:0.9;">
-    <li style="margin-bottom: 8px;"><strong>1号机 / 3号机</strong>：可订阅 <strong>舞萌DX</strong> 官方动态。</li>
-    <li><strong>2号机 / 4号机</strong>：可订阅 <strong>PJSK国服/国际服</strong> 官方动态。</li>
-  </ul>
+| 适用机型 | 可订阅内容 | 说明 |
+| :--- | :--- | :--- |
+| **1号机 / 3号机** | **舞萌 DX** 官方动态 | 请联系对应 Bot 管理员 |
+| **2号机 / 4号机** | **PJSK 国服/国际服** 动态 | 请联系对应 Bot 管理员 |
 
-  <p style="font-size: 14px; font-weight: bold; color: #fb7299;">📌 订阅方式：</p>
-  <p style="font-size: 13px; opacity: 0.8; margin: 0;">目前订阅需手动添加。请准备好您的<strong>群号</strong>，并联系对应的 Bot 账号管理员为您配置订阅服务。</p>
 </div>
 
 <style>
