@@ -76,9 +76,9 @@
   
 | 项目 | 内容 |
 | :--- | :--- |
-| **版本** | Java 1.21.4 |
+| **版本** | Fabric 1.21.4 |
 | **查询** | `mc status` |
-| **加入** | 请在群公告获取IP、整合包 |
+| **加入** | 请在群公告获取 IP |
 
 </div>
 
@@ -91,6 +91,19 @@
 | `steam播报开启` | 开启群内折扣播报 |
 | `steam喜加一` | 查询限时免费游戏 |
 
+</div>
+
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #fb7299; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
+  <h3 style="margin-top: 0; color: #fb7299;">📺 B站动态订阅</h3>
+  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">支持自动推送官方最新 B 站动态至群聊。</p>
+
+  <ul style="margin:0 0 15px 20px; font-size:14px; opacity:0.9;">
+    <li style="margin-bottom: 8px;"><strong>1号机 / 3号机</strong>：可订阅 <strong>舞萌DX</strong> 官方动态。</li>
+    <li><strong>2号机 / 4号机</strong>：可订阅 <strong>PJSK国服/国际服</strong> 官方动态。</li>
+  </ul>
+
+  <p style="font-size: 14px; font-weight: bold; color: #fb7299;">📌 订阅方式：</p>
+  <p style="font-size: 13px; opacity: 0.8; margin: 0;">目前订阅需手动添加。请准备好您的<strong>群号</strong>，并联系对应的 Bot 账号管理员为您配置订阅服务。</p>
 </div>
 
 <style>
