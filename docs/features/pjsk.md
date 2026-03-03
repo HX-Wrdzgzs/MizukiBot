@@ -1,96 +1,40 @@
 # 🎵 PJSK 相关功能
 
-> 包含查分、查榜、组卡计算器、活动预测及各类娱乐功能。
-> <br><small>*部分功能支持 `cn` (国服) 或 `tw` (台服) 前缀。*</small>
+> 提供 Project SEKAI 的查分、查榜、卡面查询等一站式综合辅助功能。
 
 <br>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-  <h3 style="margin-top: 0; color: #1890ff;">📊 玩家数据查询 (需上传数据)</h3>
-  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">
-    <strong>日/台服上传地址：</strong> <a href="http://go.mikuware.top/" target="_blank" style="color:#1890ff; font-weight:bold;">👉 点击进入数据上传页面</a><br>
-    <span style="font-size:12px; opacity:0.6;">(日服玩家可直接复制引继码给Bot上传)</span>
-  </p>
+::: warning ⚠️ 注意：账号防丢指南
+**在进行账号上传或绑定操作前，请务必一定保存你的引继码与密码！**
+以免因意外情况、网络波动或平台风控导致游戏账号丢失。Bot 无法为您找回丢失的账号。
+:::
 
-| 指令 | 说明 |
-| :--- | :--- |
-| `rk` | 获取玩家排位信息 |
-| `b39` | Rating最高39首 (仅供参考) |
-| `pjsk b30` | Rating最高30首 (算法不同) |
-| `pjsk进度 [ex/apd]` | 查Master/Expert完成表 |
-| `pjskdetail` | 查金币、水晶、练度 (建议私聊) |
-| `视奸` | 查看当前队伍综合力构成 |
-| `逮捕` | 查询高难谱面 AP/FC 进度 |
-| `pjskcard` | 个人卡牌图鉴 (可加角色花名) |
-| `pjskevent` | 查询前10次最高排名活动 |
-| `最强组卡` | 同色同队最高分卡组 |
-
-</div>
-
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #E97EB3; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-  <h3 style="margin-top: 0; color: #E97EB3;">🎵 查歌与活动 (无需上传)</h3>
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #39C5BB; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+  <h3 style="margin-top: 0; color: #39C5BB;">🔗 账号绑定与上传</h3>
   
-  <h4 style="color: #E97EB3; margin-top: 15px;">基础与榜单</h4>
-
-| 指令 | 说明 |
-| :--- | :--- |
-| `绑定 [ID]` | 绑定游戏ID |
-| `给看/不给看` | 开放/关闭被At权限 |
-| `pjskprofile` | 获取旧版个人信息卡片 |
-| `查时间` | 查询注册时间 |
-| `id` | 返回当前QQ绑定ID |
-| `sk` | 查活动排名/档线 |
-| `分数线` / `sk线` | 查当前档线分数 (5分延迟) |
-| `ss` / `wlss` | 查当前/单榜档线时速 |
-| `sk预测` | (日服) 查预测线 |
-| `查房` | 查最近1小时活动情况 |
-| `活动 [编号]` | 查活动信息 |
-
-  <h4 style="color: #E97EB3; margin-top: 25px;">歌曲查询</h4>
-
-| 指令 | 说明 |
-| :--- | :--- |
-| `pinfo [曲名]` | 查歌曲详情 |
-| `查bpm` / `查物量` | 查询歌曲BPM或物量信息 |
-| `谱面预览 [曲] [难度]` | 预览谱面 (ex/master/apd) |
-| `技能预览` | 查看技能详情 |
-| `难度排行 [lv] [难度]` | 例: `难度排行 33 master` |
-
-</div>
-
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #fa8c16; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-  <h3 style="margin-top: 0; color: #fa8c16;">🧮 组卡计算器</h3>
-
 | 指令 | 说明 | 示例 |
 | :--- | :--- | :--- |
-| `组卡 [队] [色]` | 指定箱活最佳卡组 | `组卡 ln 橙` |
-| `活动组卡 [曲]` | 当前活动最佳卡组 | `活动组卡 独瑞 hard` |
-| `挑战组卡 [人]` | 每日挑战Live最佳卡组 | `挑战组卡 miku` |
+| `pjsk绑定 [ID]` | 绑定您的 PJSK 游戏 ID | `pjsk绑定 123456789` |
+| `pjsk更新` | 更新您的游戏数据到 Bot | `pjsk更新` |
 
 </div>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #722ed1; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-  <h3 style="margin-top: 0; color: #722ed1;">🃏 卡面查询</h3>
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #39C5BB; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+  <h3 style="margin-top: 0; color: #39C5BB;">📊 数据查询</h3>
   
-| 指令 | 说明 |
-| :--- | :--- |
-| `查卡 [参数...]` | 查卡 (支持: 角色/属性/稀有度) |
-| `card [编号]` | 根据ID查大图 |
-| `cardinfo [编号]` | 根据ID查数值 |
-| `看 [角色]` | 随机看一张卡图 |
+| 指令 | 说明 | 示例 |
+| :--- | :--- | :--- |
+| `pjsk查分` | 查询当前活动分数或个人总分 | `pjsk查分` |
+| `pjsk进度` | 查看活动目标进度 | `pjsk进度` |
 
 </div>
 
-<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #52c41a; padding: 20px; border-radius: 12px;">
-  <h3 style="margin-top: 0; color: #52c41a;">🎉 娱乐功能</h3>
-  
-| 指令 | 说明 |
-| :--- | :--- |
-| `pjsk听歌识曲` | 开启听歌识曲 |
-| `pjsk猜卡面` | 开启猜卡面 |
-| `pjsk抽卡` | 模拟10连抽卡 |
-| `pjsk反抽卡` | 反转概率抽卡 |
-| `随个 [组合] [等级]` | 随机推歌 (例: `随个 25 33`) |
-| `葱什么` | 随机一首 Miku 的歌 |
-
-</div>
+<style>
+.custom-card table th:nth-child(1),
+.custom-card table td:nth-child(1),
+.custom-card table th:nth-child(3),
+.custom-card table td:nth-child(3) {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+</style>
