@@ -60,7 +60,7 @@
 | 指令 | 说明 | 示例 |
 | :--- | :--- | :--- |
 | `sk [排名/ID]` | 查指定排名/玩家分数 (支持同时查最多7人) | `sk 100` |
-| `sk预测*` | 获取预测线信息 (仅日服单榜，不一定能获取到所有档线，数据源于33) | `sk预测` |
+| `sk预测*` | 获取预测线信息 (仅日服单榜，不一定能获取所有档线) | `sk预测` |
 | `查房 [排名]` | 查询特定排名最近 1 小时的活动情况 | `查房 50` |
 | `分数线 [排名]` | 查看本期活动中特定排名的分数趋势 | `分数线 1000` |
 | `时速 [分钟]` | 查各榜线特定时间内 PT 增长时速 (最大1440) | `时速 10` |
@@ -74,9 +74,9 @@
   
 | 指令 | 说明 | 示例 |
 | :--- | :--- | :--- |
-| `组卡 [队名] [属性]` | 指定箱活中推荐最佳卡组 top7 (默认嫉妒ex)。队名含(ln/mmj/vbs/ws/25/vs)，属性含(绿/粉/橙/蓝/紫)。 | `组卡 ln 橙` |
+| `组卡 [队名] [属性]` | 指定箱活中推荐最佳卡组 top7。队名含(ln/mmj/vbs/ws/25/vs)，属性含(绿/粉/橙/蓝/紫)。 | `组卡 ln 橙` |
 | `活动组卡 [歌名] [难度]` | 当前活动推荐最佳卡组 top7。不填默认嫉妒ex。WL活第一参数识别为角色。 | `活动组卡 龙 hard` |
-| `挑战组卡 [角色] [歌名] [难度]` | 每日挑战推荐最佳卡组 top7。 | `挑战组卡 ick 10th master` |
+| `挑战组卡 [角色] [歌名] [难度]` | 每日挑战推荐最佳卡组 top7。 | `挑战组卡 ick 10th ma` |
 | `最强组卡` | 返回您同色同队中分数最高的卡组 top7 (默认嫉妒ex)。不需要参数。 | `最强组卡` |
 
 </div>
@@ -125,16 +125,43 @@
 | `pjsk猜卡面*` | 发送卡面局部截图猜角色 (40s限时)。输入 <code>结束猜卡面</code> 中断。 |
 | `pjsk抽卡*` | 格式：<code>pjsk抽卡/pjskXX连/pjsk反抽卡 [当期卡池编号]</code>。模拟抽卡体验。 |
 | `看 [角色]*` | 返回该角色随机卡图。 |
-| `随个 [组合] [level]*` | 返回随机指定等级歌曲 info。如果有组合名，会从该组合演唱/翻唱中随机。 |
+| `随个 [组合] [level]*` | 返回随机指定等级歌曲 info。如果有组合名，会从该组合中随机。 |
 | `葱什么*` | 返回随机歌曲 info。 |
 
 </div>
 
 <style>
-/* 强制表格的第一列（指令）不换行 */
+/* 让表格在手机端可以左右滑动，拒绝“面条”排版 */
+.custom-card table {
+  display: block !important;
+  overflow-x: auto !important;
+  white-space: nowrap !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 恢复表格内文字的自动换行 */
+.custom-card table th, 
+.custom-card table td {
+  white-space: normal !important;
+}
+
+/* 第一列（指令列）坚决不换行，保持整齐 */
 .custom-card table th:nth-child(1),
 .custom-card table td:nth-child(1) {
   white-space: nowrap !important;
   word-break: keep-all !important;
+  min-width: 100px;
+}
+
+/* 第二列（说明列）强制设定最小宽度，太窄就触发滑动而不是挤变形 */
+.custom-card table th:nth-child(2),
+.custom-card table td:nth-child(2) {
+  min-width: 250px !important;
+}
+
+/* 第三列（示例列）如果有的话，也给个底线宽度 */
+.custom-card table th:nth-child(3),
+.custom-card table td:nth-child(3) {
+  min-width: 150px !important;
 }
 </style>
