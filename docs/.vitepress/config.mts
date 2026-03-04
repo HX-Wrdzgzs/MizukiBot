@@ -37,6 +37,7 @@ export default defineConfig({
         items: [
           { text: 'PJSK 相关', link: '/features/pjsk' },
           { text: '舞萌 DX', link: '/features/maimai' },
+          { text: '中二节奏', link: '/features/chunithm' },
           { text: '表情制作', link: '/features/meme' },
           { text: '通用工具', link: '/features/tools' }
         ]
