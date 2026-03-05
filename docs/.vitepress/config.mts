@@ -8,7 +8,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'icon', href: '/Picture/avatar.jpg' }],
-    ['meta', { name: 'keywords', content: 'Mizuki Bot, PJSK, Project Sekai, 舞萌DX, maimai, 音游Bot, 帮助文档' }],
+    ['meta', { name: 'keywords', content: 'Mizuki Bot, PJSK, Project Sekai, 舞萌DX, maimai, 中二节奏, 音游Bot, 帮助文档' }],
     ['meta', { name: 'author', content: 'HX-Wrdzgzs' }],
     ['meta', { property: 'og:title', content: 'Mizuki Bot 帮助文档' }],
     ['meta', { property: 'og:description', content: '专为 PJSK 与 舞萌 DX 玩家打造的一站式 Bot 助手' }],
@@ -40,7 +40,6 @@ export default defineConfig({
           { text: '中二节奏', link: '/features/chunithm' },
           { text: '表情制作', link: '/features/meme' },
           { text: '通用工具', link: '/features/tools' }
-          { text: '🟩 MC 服务器公告', link: '/features/mc_update' }
         ]
       },
       { 
@@ -63,14 +62,22 @@ export default defineConfig({
           ]
         },
         {
+          // ✨ 新增的独立公告板块 ✨
+          text: '📢 更新与公告',
+          items: [
+            { text: '🟩 MC 服务器更新', link: '/features/mc_update' }
+            // 💡 如果之后有新的更新日志，可以按照下面的格式继续加：
+            // { text: '🤖 Bot 更新日志', link: '/features/bot_update' }
+          ]
+        },
+        {
           text: '功能文档',
           items: [
             { text: 'PJSK 相关功能', link: '/features/pjsk' },
             { text: '舞萌 DX 专项', link: '/features/maimai' },
-            { text: '中二节奏', link: '/features/chunithm' },
+            { text: '中二节奏 (Chuni)', link: '/features/chunithm' },
             { text: '表情制作系统', link: '/features/meme' },
             { text: '通用工具与娱乐', link: '/features/tools' }
-            { text: '🟩 MC 服务器公告', link: '/features/mc_update' }
           ]
         },
         {
@@ -82,7 +89,7 @@ export default defineConfig({
             { text: '⚖️ 免责声明', link: '/disclaimer' },
             { text: '📜 用户使用协议', link: '/agreement' },
             { text: '❤️ 赞助我们', link: '/sponsor' },
-            { text: '💎 赞助榜名单', link: '/sponsor_list' } // ✅ 成功移到了赞助我们下方
+            { text: '💎 赞助榜名单', link: '/sponsor_list' }
           ]
         }
       ]
@@ -90,7 +97,7 @@ export default defineConfig({
 
     footer: {
       message: 'Created with ♿ by HX-Wrdzgzs',
-      copyright: 'Powered by Akaboshi Lab'
+      copyright: 'Powered by MizukiBot Develop'
     },
     
     search: {
