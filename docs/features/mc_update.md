@@ -1,4 +1,4 @@
-# ![草方块](/Grass_Block_JE7_BE6.png) Mizuki MC 更新公告
+# ![草方块](/features/Grass_Block_JE7_BE6.png) Mizuki MC 更新公告
 
 > 📅 更新日期：2026.3.5 | ✍️ 整合包作者：MC_FanBuFan
 
