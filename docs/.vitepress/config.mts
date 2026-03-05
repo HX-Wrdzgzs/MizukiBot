@@ -68,6 +68,7 @@ export default defineConfig({
             { text: '舞萌 DX 专项', link: '/features/maimai' },
             { text: '表情制作系统', link: '/features/meme' },
             { text: '通用工具与娱乐', link: '/features/tools' }
+            { text: '🟩 MC 服务器公告', link: '/features/mc_update' }
           ]
         },
         {
