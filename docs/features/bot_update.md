@@ -1,11 +1,11 @@
-# 🤖 Mizuki Bot 更新日志
+# Mizuki Bot 更新日志
 
 > 记录 Mizuki Bot 的成长与功能迭代，感谢每一位用户的支持与陪伴！
 
 <br>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #a855f7; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #a855f7;">✨ 2026.3.1 | 经济系统进阶与修复</h3>
+  <h3 style="margin-top: 0; color: #a855f7;">2026.3.1 | 经济系统进阶与修复</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>指令更新</strong>：新增 <code>经济帮助</code> 用户发送即可获取文字版说明。</li>
     <li><strong>CDK 兑换系统</strong>：管理可通过发送 CDK 给玩家兑换物品。用户需在 <code>store.mizuki.top</code> 复制文案发送给 Bot，兑换成功后扣除对应 PC 数。（注：暂无用户登录系统，需手动发给 Bot）</li>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #ff4d4f; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #ff4d4f;">🧧 2026.2.20 | 马年大更新（新年快乐！）</h3>
+  <h3 style="margin-top: 0; color: #ff4d4f;">2026.2.20 | 马年大更新（新年快乐！）</h3>
   <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">祝大家马到成功，事业顺利！新版本添加了更多有趣的功能：</p>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>经济与商城</strong>：新增商店与背包功能，达到特定等级可购买补给、恢复、头衔、主题等，并保存至背包备用。</li>
@@ -29,11 +29,11 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #1890ff;">⚙️ 2026.2.16 | 服务器分流与重构</h3>
+  <h3 style="margin-top: 0; color: #1890ff;">2026.2.16 | 服务器分流与重构</h3>
   <p style="font-size: 13px; opacity: 0.8; margin-bottom: 10px;">基于不可抗因素，Bot 划分为「综合功能」与「PJSK 专属」阵列：</p>
   <ul style="margin: 0 0 15px 20px; font-size: 13px; opacity: 0.9;">
-    <li>🛠️ <strong>综合机</strong>：1号机 (3986839028) | 3号机 (3947949425) | 5号机 (3904382316)</li>
-    <li>🎵 <strong>PJSK机</strong>：2号机 (1005524479) | 4号机 (3925294264) | 6号机 (3675727244)</li>
+    <li><strong>综合机</strong>：1号机 (3986839028) | 3号机 (3947949425) | 5号机 (3904382316)</li>
+    <li><strong>PJSK机</strong>：2号机 (1005524479) | 4号机 (3925294264) | 6号机 (3675727244)</li>
   </ul>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>签到与经济正式版</strong>：重新构建了签到插件（测试版数据已清空），重构了个人信息、经济帮助、转账、PK转码。</li>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #d4b106; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #d4b106;">💰 2026.2.6 - 2.13 | 经济系统与签到进阶</h3>
+  <h3 style="margin-top: 0; color: #d4b106;">2026.2.6 - 2.13 | 经济系统与签到进阶</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>(2.13) 经济生态上线</strong>：支持个人信息、签到、PK、熟练度、转账、红包等，新增每日随机事件。</li>
     <li><strong>(2.13) 安全与防护</strong>：拉 Bot 需进入审核群 <code>1053964431</code>；新增 PJSK 游玩次数限制（默认 20 次，可修改）；增加多 Bot 同群分流响应机制。</li>
@@ -52,7 +52,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #39C5BB; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #39C5BB;">📈 2026.2.3 | 数据对接与十万级并发</h3>
+  <h3 style="margin-top: 0; color: #39C5BB;">2026.2.3 | 数据对接与十万级并发</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>成绩与安全</strong>：更新水鱼/落雪成绩上传，新增玩家成就感查看；更新落雪 OAuth 绑定提升安全性（感谢 Te:River 提供解决方案）。</li>
     <li><strong>合规与热度</strong>：更新免责声明（将对接本地数据库审核）。Bot 日活量达 3.4w，使用人数近 1w，帮助文档荣登必应首页！</li>
@@ -62,7 +62,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #eb2f96; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #eb2f96;">🛠️ 2026.1.27 - 1.31 | 反馈系统与邮箱上线</h3>
+  <h3 style="margin-top: 0; color: #eb2f96;">2026.1.27 - 1.31 | 反馈系统与邮箱上线</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>(1.31) 反馈转移</strong>：删除旧 Feedback 插件，转换为飞书/腾讯文档（因部分用户长篇大论不发图）。</li>
     <li><strong>(1.31) 功能迭代</strong>：实现舞萌成绩上传，部分插件可进行群内屏蔽。</li>
@@ -72,7 +72,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #fa8c16; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #fa8c16;">🚗 2026.1.25 | PJSK 车队助手重磅上线</h3>
+  <h3 style="margin-top: 0; color: #fa8c16;">2026.1.25 | PJSK 车队助手重磅上线</h3>
   <p style="font-size: 13px; opacity: 0.8; margin-bottom: 10px;">还在为找不到队友发愁？新上线的车队系统更适合有冲榜心的烤批！</p>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>发车格式</strong>：<code>5位房号 + 属性 + 缺人数</code>，支持“战力/普通/时效”等多属性筛选。</li>
@@ -82,7 +82,7 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #13c2c2; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #13c2c2;">🌩️ 2026.1.19 - 1.24 | 断网风波与架构调整</h3>
+  <h3 style="margin-top: 0; color: #13c2c2;">2026.1.19 - 1.24 | 断网风波与架构调整</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>(1.24) 服务恢复与 AI 内测</strong>：断网后全线恢复，团队更名为 <strong>Akaboshi Lab | 赤星实验室</strong>。内测会自我学习群聊风格并“偷表情包”的 AI 对话功能。开发 Linux 版本的 HongXingOS，并更新 status 网页。</li>
     <li><strong>(1.23) 机房断网事件</strong>：遭遇无预警断网，期间仅保留帮助文档与 Dev 服务可用。</li>
@@ -91,11 +91,11 @@
 </div>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #52c41a; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #52c41a;">🚀 2026.1.1 - 1.11 | 正式版起航</h3>
+  <h3 style="margin-top: 0; color: #52c41a;">2026.1.1 - 1.11 | 正式版起航</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
     <li><strong>(1.11) Meme 重构与屏蔽</strong>：将 Meme 全部重构接入海豚数据库（因为 .json 炸了不得不干）；新增 Meme 屏蔽群聊功能，防止多次触发嫌烦。</li>
     <li><strong>(1.11) 备用机启用</strong>：4号机正式作为备用 Bot，仅在主 Bot 风控或测试时启用（建议添加双 Q 号防封）。</li>
     <li><strong>(1.1) 正式版发布</strong>：集成了 PJSK 全家桶、舞萌助手、娱乐模组（Meme/表情制作/B站解析等）。</li>
-    <li>🌟 <strong>特别鸣谢技术支持（排名不分先后）</strong>：Te:Rivet, uni_mayu, ecomter, Sirius, 竹。</li>
+    <li><strong>特别鸣谢技术支持（排名不分先后）</strong>：Te:Rivet, uni_mayu, ecomter, Sirius, 竹。</li>
   </ul>
 </div>
