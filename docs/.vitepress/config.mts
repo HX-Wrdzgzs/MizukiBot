@@ -40,6 +40,7 @@ export default defineConfig({
           { text: '中二节奏', link: '/features/chunithm' },
           { text: '表情制作', link: '/features/meme' },
           { text: '通用工具', link: '/features/tools' }
+          { text: '🟩 MC 服务器公告', link: '/features/mc_update' }
         ]
       },
       { 
@@ -66,6 +67,7 @@ export default defineConfig({
           items: [
             { text: 'PJSK 相关功能', link: '/features/pjsk' },
             { text: '舞萌 DX 专项', link: '/features/maimai' },
+            { text: '中二节奏', link: '/features/chunithm' },
             { text: '表情制作系统', link: '/features/meme' },
             { text: '通用工具与娱乐', link: '/features/tools' }
             { text: '🟩 MC 服务器公告', link: '/features/mc_update' }
