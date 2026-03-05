@@ -62,12 +62,10 @@ export default defineConfig({
           ]
         },
         {
-          // ✨ 新增的独立公告板块 ✨
           text: '📢 更新与公告',
           items: [
-            { text: '🟩 MC 服务器更新', link: '/features/mc_update' }
-            // 💡 如果之后有新的更新日志，可以按照下面的格式继续加：
-            // { text: '🤖 Bot 更新日志', link: '/features/bot_update' }
+            { text: '🟩 MC 服务器更新', link: '/features/mc_update' },
+            { text: '🤖 Bot 更新日志', link: '/features/bot_update' } // 👈 就是这一行！帮您加好了！
           ]
         },
         {
@@ -97,7 +95,7 @@ export default defineConfig({
 
     footer: {
       message: 'Created with ♿ by HX-Wrdzgzs',
-      copyright: 'Powered by MizukiBot Develop'
+      copyright: 'Powered by Akaboshi Lab'
     },
     
     search: {
