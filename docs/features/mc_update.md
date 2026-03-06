@@ -1,4 +1,7 @@
-# <img src="/Picture/Grass_Block_JE7_BE6.png" width="40" style="vertical-align: middle; margin-right: 8px;">Mizuki MC 更新公告
+<h1 style="display: flex; align-items: center; gap: 8px;">
+  <img src="/Picture/Grass_Block_JE7_BE6.png" width="40" alt="草方块图标">
+  Mizuki MC 更新公告
+</h1>
 
 > 📅 更新日期：2026.3.5 | ✍️ 整合包作者：MC_FanBuFan
 
