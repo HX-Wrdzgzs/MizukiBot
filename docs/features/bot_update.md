@@ -5,36 +5,52 @@
 <br>
 
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #722ed1; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
-  <h3 style="margin-top: 0; color: #722ed1;">2026.4 | 4月核心更新与 Mai-Sync 升级</h3>
-  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">日活量已突破 5w+！感谢大家的支持，后续将专向开发官方 Bot 及 DXPASS。</p>
+  <h3 style="margin-top: 0; color: #722ed1;">2026.4 | 4月核心更新与架构升级</h3>
+  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">此版本包含大量底层重构与功能迭代（屎山x）。目前 Mizuki Bot 日活量已达到 5w 以上，感谢大家的支持，后续将专向开发官方 Bot 及 DXPASS（已规划）。</p>
   
-  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Bot 核心与底层架构</h4>
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Bot 核心与安全防护</h4>
   <ul style="margin: 5px 0 15px 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
-    <li><strong>Mizuki 文本审核</strong>：原 HX 鹰眼审核机制升级，加入上下文检索（10条）。触发违规（含 18+）将拦截发送并反向封禁使用权，并增加阶梯处罚机制。</li>
-    <li><strong>鉴权与防护</strong>：新增 HongXing AuthLit4 鉴权与防护框架，抵御恶意攻击，提供最高级别数据与隐私保障。</li>
-    <li><strong>底层预处理</strong>：新增 HongXing OpenAis，底层缓存所需功能，作为 AuthLit 的必要驱动。</li>
-    <li><strong>交互优化</strong>：新增 Bot 信息间隔（随机秒数回复）并引用用户触发的功能；修复了 Mizuki 经济榜部分问题。</li>
+    <li><strong>Mizuki 文本审核</strong>：原 HX 鹰眼审核机制升级，加入上下文检索（当用户触发 Bot 时上下文为 10 条）。当用户发送违规信息（包括 18+）将拦截即将发送的信息，并反向封禁该用户对 Bot 的使用权，增加阶梯处罚机制。</li>
+    <li><strong>鉴权防护框架</strong>：新增 HongXing AuthLit4。该系统将（不）有效抵御各类恶意攻击，为用户数据与隐私安全提供最高级别保障。</li>
+    <li><strong>底层预处理</strong>：新增 HongXing OpenAis，在底层框架上进行预处理机制并提前缓存需要的功能，也是 AuthLit 的必要驱动（闲着无聊搞得x）。</li>
+    <li><strong>交互优化</strong>：新增 Bot 信息间隔功能，采用随机秒数回复，并引用用户触发 Bot 的原信息。</li>
   </ul>
 
-  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Mai-Sync 更新与落雪 B50</h4>
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">经济系统与落雪 B50</h4>
   <ul style="margin: 5px 0 15px 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
-    <li><strong>落雪 B50 (预计新增)</strong>：在水鱼 B50 基础上新增 AP50，后续支持热力图、分数趋势、FC50 等（注：不支持别名投票系统）。</li>
-    <li><strong>Mai-Sync 深度升级</strong>：
+    <li><strong>经济系统修复</strong>：更新了打工界面；修复了目前已知“打工多无法进行触发”的问题；Mizuki 经济榜系统从时刻更新调整为 3 分钟数据更新。</li>
+    <li><strong>落雪 B50 (预计新增)</strong>：在水鱼 B50 基础上新增 AP50，后续将支持热力图、分数趋势、FC50 等功能（注：该功能不支持别名投票系统）。</li>
+  </ul>
+
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Mai-Sync 深度升级与周边软件</h4>
+  <ul style="margin: 5px 0 15px 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
+    <li><strong>Mai-Sync 更新清单</strong>：
       <ol style="margin-top: 5px; margin-bottom: 5px;">
-        <li>新增落雪/水鱼双端上传。</li>
-        <li>新增落雪收藏品自动同步并自动登出（仅限类型二）。</li>
-        <li>自动绑定 Userid 获取成绩，无需二维码（仅类型一，不含 FC/FS 状态）。</li>
-        <li>功能新增：用户账号预览、强制停止指令、取消绑定指令、队列系统、华立不下发 Cookie 提示词。</li>
-        <li>架构优化：各分布 Bot 数据共通，支持带参指令直接触发，不再增加游玩 PC 数与上传占位成绩。</li>
-        <li>文案优化：优化上传、舞萌帮助及绑定落雪提示语。</li>
+        <li>新增落雪水鱼双端上传。</li>
+        <li>新增落雪收藏品自动同步并自动登出 [仅限类型二]。</li>
+        <li>自动绑定 Userid 后无需发送二维码即可获取成绩 [仅限类型一，且成绩不含 FC/FS 状态]。</li>
+        <li>功能新增：用户账号预览、强制停止指令、取消绑定(落雪/水鱼/Userid)指令、队列系统、华立不下发 Cookie 的提示词。</li>
+        <li>底层与交互：各分布 Bot 数据共通；支持带参指令直接触发；不再增加游玩 PC 数与上传占位成绩。</li>
+        <li>文案优化：优化上传提示词（如: 上传成绩 文本）、舞萌帮助提示语及绑定落雪提示语。</li>
       </ol>
     </li>
+    <li><strong>Mizuki-Sync 软件</strong>：将完成第一版更新，预计在 2026 年 5/6 月份开始第一轮内测，后续将发送测试链接。</li>
   </ul>
 
-  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">周边软件与工作室动态</h4>
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">HongXing (南京) 工作室公告</h4>
   <ul style="margin: 5px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
-    <li><strong>Mizuki-Sync 软件</strong>：第一版更新预计 26 年 5/6 月开启首轮内测。</li>
-    <li><strong>HongXing (南京) 工作室</strong>：停止 HongXing3 / 3.1 维护；HongXingOS7 延迟开发至 27 年；内核修更至 6.1；海外版本 Ospalin HongXingos8 正在测试中。</li>
+    <li><strong>系统规划</strong>：停止对 HongXing3 / 3.1 的更新维护支持；HongXingOS7 预计延迟开发至 27 年；内核版本将修更至 6.1 版本。</li>
+    <li><strong>安全与新分支</strong>：在 HongXingOS6 Bui.2026.4 (更新代码 e7f9) 中新增 HongXing AuthLit4，更新后几天内将完全覆盖所有保护（此机制不会对外传输隐私信息）；新增 Ospalin HongXingos8 海外版本测试中。</li>
+    <li><strong>底层与架构</strong>：新增 HongXing OpenAis 底层固件（已知情况下为可选安装）；更新 HongXing 虚拟化/虚拟机/集群的管理机制。</li>
+    <li><strong>Bug 修复清单</strong>：
+      <ul style="margin-top: 5px; margin-bottom: 5px;">
+        <li>修复错误代码 2840：在触发更新/重置等高级系统功能时进行等待页面并（成功）死机的问题。</li>
+        <li>修复登录账户时资料不是本账户的情况（原因：系统未同步更新导致系统认为没获取到并自动随机生成了用户信息）。</li>
+        <li>修复启动内核时出现乱码的情况。</li>
+        <li>修复 VMM 底层干预时出现崩溃的问题。</li>
+        <li>修复游戏自适应出现 CPU/GPU 调用过高的问题。</li>
+      </ul>
+    </li>
   </ul>
 </div>
 
