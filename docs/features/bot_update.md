@@ -4,6 +4,40 @@
 
 <br>
 
+<div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #722ed1; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
+  <h3 style="margin-top: 0; color: #722ed1;">2026.4 | 4月核心更新与 Mai-Sync 升级</h3>
+  <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">日活量已突破 5w+！感谢大家的支持，后续将专向开发官方 Bot 及 DXPASS。</p>
+  
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Bot 核心与底层架构</h4>
+  <ul style="margin: 5px 0 15px 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
+    <li><strong>Mizuki 文本审核</strong>：原 HX 鹰眼审核机制升级，加入上下文检索（10条）。触发违规（含 18+）将拦截发送并反向封禁使用权，并增加阶梯处罚机制。</li>
+    <li><strong>鉴权与防护</strong>：新增 HongXing AuthLit4 鉴权与防护框架，抵御恶意攻击，提供最高级别数据与隐私保障。</li>
+    <li><strong>底层预处理</strong>：新增 HongXing OpenAis，底层缓存所需功能，作为 AuthLit 的必要驱动。</li>
+    <li><strong>交互优化</strong>：新增 Bot 信息间隔（随机秒数回复）并引用用户触发的功能；修复了 Mizuki 经济榜部分问题。</li>
+  </ul>
+
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">Mai-Sync 更新与落雪 B50</h4>
+  <ul style="margin: 5px 0 15px 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
+    <li><strong>落雪 B50 (预计新增)</strong>：在水鱼 B50 基础上新增 AP50，后续支持热力图、分数趋势、FC50 等（注：不支持别名投票系统）。</li>
+    <li><strong>Mai-Sync 深度升级</strong>：
+      <ol style="margin-top: 5px; margin-bottom: 5px;">
+        <li>新增落雪/水鱼双端上传。</li>
+        <li>新增落雪收藏品自动同步并自动登出（仅限类型二）。</li>
+        <li>自动绑定 Userid 获取成绩，无需二维码（仅类型一，不含 FC/FS 状态）。</li>
+        <li>功能新增：用户账号预览、强制停止指令、取消绑定指令、队列系统、华立不下发 Cookie 提示词。</li>
+        <li>架构优化：各分布 Bot 数据共通，支持带参指令直接触发，不再增加游玩 PC 数与上传占位成绩。</li>
+        <li>文案优化：优化上传、舞萌帮助及绑定落雪提示语。</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h4 style="color: #722ed1; margin-top: 15px; font-size: 15px;">周边软件与工作室动态</h4>
+  <ul style="margin: 5px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
+    <li><strong>Mizuki-Sync 软件</strong>：第一版更新预计 26 年 5/6 月开启首轮内测。</li>
+    <li><strong>HongXing (南京) 工作室</strong>：停止 HongXing3 / 3.1 维护；HongXingOS7 延迟开发至 27 年；内核修更至 6.1；海外版本 Ospalin HongXingos8 正在测试中。</li>
+  </ul>
+</div>
+
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #a855f7; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #a855f7;">2026.3.1 | 经济系统进阶与修复</h3>
   <ul style="margin: 10px 0 0 20px; font-size: 14px; opacity: 0.9; line-height: 1.8;">
@@ -24,7 +58,7 @@
     <li><strong>事件与语录</strong>：更新黄历事件，扩展语录，丰富文案让签到更加具体化。</li>
     <li><strong>群管与订阅</strong>：更新欢迎/离群插件（各设 10 条文案）；更新 B站动态订阅，支持多群订阅。</li>
     <li><strong>性能与清理</strong>：修复猜卡面/猜歌遇到大文件无法上传的问题；删除了使用较少的 AI Vits 语音服务。</li>
-    <li><strong>HongXingOS6 3月Dev版</strong>：修复了内核假死问题，同时<strong>解决了提出问题的用户</strong>（划掉）。</li>
+    <li><strong>HongXingOS6 3月Dev版</strong>：修复了内核假死问题，同时解决了提出问题的用户（划掉）。</li>
   </ul>
 </div>
 
@@ -96,6 +130,6 @@
     <li><strong>(1.11) Meme 重构与屏蔽</strong>：将 Meme 全部重构接入海豚数据库（因为 .json 炸了不得不干）；新增 Meme 屏蔽群聊功能，防止多次触发嫌烦。</li>
     <li><strong>(1.11) 备用机启用</strong>：4号机正式作为备用 Bot，仅在主 Bot 风控或测试时启用（建议添加双 Q 号防封）。</li>
     <li><strong>(1.1) 正式版发布</strong>：集成了 PJSK 全家桶、舞萌助手、娱乐模组（Meme/表情制作/B站解析等）。</li>
-    <li><strong>特别鸣谢技术支持（排名不分先后）</strong>：Te:Rivet, uni_mayu, ecomter, Sirius, 竹。</li>
+    <li><strong>特别鸣谢技术支持（排名不分先后）</strong>：Te:Rivet, uni_mayu, ecomter, Sirius, zhu。</li>
   </ul>
 </div>
