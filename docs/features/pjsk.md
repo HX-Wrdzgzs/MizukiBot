@@ -1,19 +1,15 @@
 # 🎵 PJSK 模块功能
-
 ::: warning ⚠️ 账号防丢指南
 **在进行账号上传或绑定操作前，请务必保存你的引继码与密码！**
 以免因意外情况、网络波动或平台风控导致游戏账号丢失。Bot 无法为您找回丢失的账号。
 :::
-
 <p style="font-size: 14px; opacity: 0.8; margin-bottom: 25px; line-height: 1.8;">
   <strong>🌐 多服务器前缀支持：</strong><br>
   在大部分查分、查榜、绑定指令前添加特定前缀，即可跨服查询：<br>
   <code>cn</code> (国服) | <code>tw</code> (台服) | <code>en</code> (国际服) | <code>kr</code> (韩服) | 不加前缀默认日服<br>
-  <em>(例如：<code>cn绑定</code>、<code>twsk</code>、<code>en逮捕</code>、<code>cnpjskprofile</code>)</em>
+  <em>（示例：<code>cn绑定</code>、<code>twsk</code>、<code>en逮捕</code>）</em>
 </p>
-
 ---
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #39C5BB; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #39C5BB;">🔗 账号绑定与数据上传</h3>
   <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">
@@ -34,13 +30,13 @@
 | **MySekai 数据** | 访问 <a href="https://haruki.seiunx.com/upload-data" target="_blank" style="color:#39C5BB; font-weight:bold;">👉 MySekai 数据上传页</a>。Android 推荐「Haruki工具箱」；iOS 推荐 MitM 代理模块。 |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #722ed1; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #722ed1;">📝 玩家信息、查分与 MySekai</h3>
 
 | 指令 | 说明 |
 | :--- | :--- |
-| `[前缀]pjskprofile` | 生成绑定 ID 的个人信息卡片图 |
+| `个人信息` | 生成日服/默认账号的个人信息卡片图 |
+| `[前缀]个人信息` | 生成指定外服的个人信息卡片（如：`cn个人信息` 或 `cnpjskprofile`） |
 | `[前缀]逮捕 [@/ID]` | 查询目标 Ex/Ma/Apd 难度的 FC、AP 进度 |
 | `rk` | 获取玩家排位信息 |
 | `b39` | 获取 Rating 最高的 39 首歌与总分 (需上传数据，仅供参考) |
@@ -50,7 +46,6 @@
 | `ms照片 [序号]` | (MySekai) 下载用户在游戏内拍摄的照片 |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #1890ff; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #1890ff;">📈 高阶查榜与 PT 追踪</h3>
   <p style="font-size: 13px; opacity: 0.8; margin-bottom: 15px;">
@@ -60,7 +55,7 @@
 | 指令 | 说明 | 示例 |
 | :--- | :--- | :--- |
 | `sk [排名/ID]` | 查指定排名/玩家分数 (支持同时查最多7人) | `sk 100` |
-| `sk预测*` | 获取预测线信息 (仅日服单榜，不一定能获取所有档线) | `sk预测` |
+| `sk预测*` | 获取预测线信息 (仅日服单榜，不一定能获取到所有档线，数据源于33) | `sk预测` |
 | `查房 [排名]` | 查询特定排名最近 1 小时的活动情况 | `查房 50` |
 | `分数线 [排名]` | 查看本期活动中特定排名的分数趋势 | `分数线 1000` |
 | `时速 [分钟]` | 查各榜线特定时间内 PT 增长时速 (最大1440) | `时速 10` |
@@ -68,19 +63,18 @@
 | `追踪 [排1] [排2]` | 追踪目前特定排名在本期的 PT 与排名趋势 | `追踪 1 2` |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #d4b106; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #d4b106;">🎫 组卡与查卡推荐 (需上传数据)</h3>
   
+
 | 指令 | 说明 | 示例 |
 | :--- | :--- | :--- |
-| `组卡 [队名] [属性]` | 指定箱活中推荐最佳卡组 top7。队名含(ln/mmj/vbs/ws/25/vs)，属性含(绿/粉/橙/蓝/紫)。 | `组卡 ln 橙` |
+| `组卡 [队名] [属性]` | 指定箱活中推荐最佳卡组 top7 (默认嫉妒ex)。队名含(ln/mmj/vbs/ws/25/vs)，属性含(绿/粉/橙/蓝/紫)。 | `组卡 ln 橙` |
 | `活动组卡 [歌名] [难度]` | 当前活动推荐最佳卡组 top7。不填默认嫉妒ex。WL活第一参数识别为角色。 | `活动组卡 龙 hard` |
-| `挑战组卡 [角色] [歌名] [难度]` | 每日挑战推荐最佳卡组 top7。 | `挑战组卡 ick 10th ma` |
+| `挑战组卡 [角色] [歌名] [难度]` | 每日挑战推荐最佳卡组 top7。 | `挑战组卡 ick 10th master` |
 | `最强组卡` | 返回您同色同队中分数最高的卡组 top7 (默认嫉妒ex)。不需要参数。 | `最强组卡` |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #f5222d; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #f5222d;">🎶 歌曲谱面与别名设置</h3>
   <p style="font-size: 13px; color: #f5222d; opacity: 0.8; margin-bottom: 15px;">⚠️ 别名设置日志按日公示，违规乱设别名将被删词或封禁 Bot 使用权！</p>
@@ -100,10 +94,10 @@
 | `charalias [昵称]*` | 查看特定角色的所有已绑定昵称 |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #ff85c0; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
   <h3 style="margin-top: 0; color: #ff85c0;">🎫 卡牌与活动全能图鉴</h3>
   
+
 | 指令 | 说明 |
 | :--- | :--- |
 | `查卡 [角色/卡面ID]*` | 查角色所有卡牌，或查特定 ID 卡牌的详细信息 |
@@ -113,7 +107,6 @@
 | `查活动 [ID/关键字]*` | 查指定活动。支持单/多关键字精细筛选 (如 `查活动 草 5v5`、`查活动 knd 蓝`) |
 
 </div>
-
 <div class="custom-card" style="background: var(--vp-c-bg-soft); border-left: 5px solid #52c41a; padding: 20px; border-radius: 12px;">
   <h3 style="margin-top: 0; color: #52c41a;">🎮 互动小游戏与 5v5 活动功能</h3>
 
@@ -129,7 +122,6 @@
 | `葱什么*` | 返回随机歌曲 info。 |
 
 </div>
-
 <style>
 /* 让表格在手机端可以左右滑动，拒绝“面条”排版 */
 .custom-card table {
@@ -138,28 +130,20 @@
   white-space: nowrap !important;
   -webkit-overflow-scrolling: touch;
 }
-
-/* 恢复表格内文字的自动换行 */
 .custom-card table th, 
 .custom-card table td {
   white-space: normal !important;
 }
-
-/* 第一列（指令列）坚决不换行，保持整齐 */
 .custom-card table th:nth-child(1),
 .custom-card table td:nth-child(1) {
   white-space: nowrap !important;
   word-break: keep-all !important;
-  min-width: 100px;
+  min-width: 120px;
 }
-
-/* 第二列（说明列）强制设定最小宽度，太窄就触发滑动而不是挤变形 */
 .custom-card table th:nth-child(2),
 .custom-card table td:nth-child(2) {
   min-width: 250px !important;
 }
-
-/* 第三列（示例列）如果有的话，也给个底线宽度 */
 .custom-card table th:nth-child(3),
 .custom-card table td:nth-child(3) {
   min-width: 150px !important;
