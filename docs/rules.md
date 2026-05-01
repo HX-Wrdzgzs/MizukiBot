@@ -14,7 +14,7 @@
 | **2号机** | `10******79` | 🎵 **PJSK 查分/查榜** |
 | **3号机** | `38******09` | 🛠️ **综合功能** (除 PJSK) |
 | **4号机** | `36******44` | 🎵 **PJSK 查分/查榜** |
-| **合电占** | `38******52` | 🧩 **专项功能** |
+| **合电占** | `38******52` | 🧩 **特供版本** |
 
   <div style="background:rgba(255, 77, 79, 0.1); padding:10px; border-radius:8px; margin-top:15px;">
     <p style="font-size: 13px; color:#ff4d4f; font-weight:bold; margin:0;">
