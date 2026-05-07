@@ -8,6 +8,8 @@ export default {
   Layout() {
     const currentAvatar = ref('/Picture/avatar.jpg') 
     const currentQuote = ref('')
+    // 新增：控制公告显示状态的变量
+    const showAnnouncement = ref(true) 
 
     onMounted(() => {
       // 🎲 随机头像逻辑
@@ -22,10 +24,15 @@ export default {
         "「 かわいいは正義！だよね？ 」<br>可爱即正义！对吧？"
       ];
       currentQuote.value = quotes[Math.floor(Math.random() * quotes.length)];
+
+      // 检查当前会话是否已经关闭过公告
+      if (sessionStorage.getItem('hide_announcement')) {
+        showAnnouncement.value = false;
+      }
     })
 
     return h(DefaultTheme.Layout, null, {
-      // 1. 原有的首页随机头像
+      // 1. 首页随机头像
       'home-hero-image': () => {
         return h('div', { class: 'hero-wrapper' }, [
           h('img', { 
@@ -40,13 +47,14 @@ export default {
         ])
       },
 
-      // 2. 漂亮版：全站顶部全局公告 (像大厂官网一样的横幅)
+      // 2. 带有关闭按钮的全局公告
       'layout-top': () => {
-        return h('div', {
+        // 如果 showAnnouncement 为 false，则渲染 null（隐藏公告）
+        return showAnnouncement.value ? h('div', {
           style: {
             backgroundColor: 'var(--vp-c-brand-soft)',
             color: 'var(--vp-c-brand-1)',
-            padding: '10px 16px',
+            padding: '10px 40px 10px 16px', // 右侧留出 40px 给关闭按钮
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -54,7 +62,8 @@ export default {
             gap: '10px',
             fontSize: '14px',
             fontWeight: '500',
-            borderBottom: '1px solid var(--vp-c-brand-soft)'
+            borderBottom: '1px solid var(--vp-c-brand-soft)',
+            position: 'relative' // 为关闭按钮的绝对定位做参照
           }
         }, [
           h('span', {
@@ -75,11 +84,32 @@ export default {
               fontWeight: 'bold',
               color: 'var(--vp-c-brand-1)'
             }
-          }, '点击查看 →')
-        ])
+          }, '点击查看 →'),
+          // ✖ 关闭按钮
+          h('button', {
+            onClick: () => {
+              showAnnouncement.value = false; // 隐藏界面
+              sessionStorage.setItem('hide_announcement', 'true'); // 记录到缓存
+            },
+            style: {
+              position: 'absolute',
+              right: '16px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'transparent',
+              border: 'none',
+              fontSize: '20px',
+              cursor: 'pointer',
+              color: 'var(--vp-c-brand-1)',
+              lineHeight: '1',
+              padding: '0'
+            },
+            ariaLabel: '关闭公告'
+          }, '×')
+        ]) : null
       },
 
-      // 3. 强制全局显示的页脚 (覆盖所有页面，包括文档页)
+      // 3. 强制全局显示的页脚
       'layout-bottom': () => {
         return h('div', {
           style: {
