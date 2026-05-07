@@ -11,10 +11,7 @@ export default {
 
     onMounted(() => {
       // 🎲 随机头像逻辑
-      const images = [
-        '/Picture/avatar.jpg',
-        '/Picture/logo.gif'
-      ];
+      const images = ['/Picture/avatar.jpg', '/Picture/logo.gif'];
       currentAvatar.value = images[Math.floor(Math.random() * images.length)];
 
       // 💬 随机语录逻辑
@@ -28,7 +25,7 @@ export default {
     })
 
     return h(DefaultTheme.Layout, null, {
-      // 1. 原有的首页随机头像插槽
+      // 1. 原有的首页随机头像
       'home-hero-image': () => {
         return h('div', { class: 'hero-wrapper' }, [
           h('img', { 
@@ -43,13 +40,59 @@ export default {
         ])
       },
 
-      // 2. 新增：全局公告插槽 (显示在所有文档内容上方)
-      'doc-before': () => {
-        return h('div', { class: 'global-announcement' }, [
-          h('span', { class: 'announcement-tag' }, '公告'),
-          h('span', { class: 'announcement-content' }, 'Mizuki Bot 4月大更新已上线，欢迎查阅更新日志！'),
-          h('a', { href: '/features/bot_update', class: 'announcement-link' }, '点击查看 →')
+      // 2. 漂亮版：全站顶部全局公告 (像大厂官网一样的横幅)
+      'layout-top': () => {
+        return h('div', {
+          style: {
+            backgroundColor: 'var(--vp-c-brand-soft)',
+            color: 'var(--vp-c-brand-1)',
+            padding: '10px 16px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '10px',
+            fontSize: '14px',
+            fontWeight: '500',
+            borderBottom: '1px solid var(--vp-c-brand-soft)'
+          }
+        }, [
+          h('span', {
+            style: {
+              backgroundColor: 'var(--vp-c-brand-1)',
+              color: 'white',
+              padding: '2px 8px',
+              borderRadius: '6px',
+              fontSize: '12px',
+              fontWeight: 'bold'
+            }
+          }, '📢 公告'),
+          h('span', null, 'Mizuki Bot 4月大更新已上线，欢迎查阅更新日志！'),
+          h('a', { 
+            href: '/features/bot_update',
+            style: {
+              textDecoration: 'underline',
+              fontWeight: 'bold',
+              color: 'var(--vp-c-brand-1)'
+            }
+          }, '点击查看 →')
         ])
+      },
+
+      // 3. 强制全局显示的页脚 (覆盖所有页面，包括文档页)
+      'layout-bottom': () => {
+        return h('div', {
+          style: {
+            textAlign: 'center',
+            padding: '30px 20px',
+            fontSize: '14px',
+            color: 'var(--vp-c-text-2)',
+            borderTop: '1px solid var(--vp-c-divider)',
+            backgroundColor: 'var(--vp-c-bg)',
+            width: '100%',
+            marginTop: 'auto'
+          }
+        }, '© 2018-2026 MizukiBot Team | HongXing (Jiangsu) Dev Team. 保留所有权利。')
       }
     })
   }
