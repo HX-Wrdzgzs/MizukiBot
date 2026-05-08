@@ -21,10 +21,6 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: 'https://help.mizuki.top/Picture/banner.jpg' }]
   ],
 
-  sitemap: {
-    hostname: 'https://help.mizuki.top'
-  },
-
   themeConfig: {
     logo: '/Picture/logo.gif',
     siteTitle: 'Mizuki Bot 帮助文档',
@@ -40,13 +36,6 @@ export default defineConfig({
         ]
       },
       {
-        text: '更新与公告',
-        items: [
-          { text: 'MC 服务器更新', link: '/features/mc_update' },
-          { text: 'Bot 更新日志', link: '/features/bot_update' }
-        ]
-      },
-      {
         text: '功能文档',
         items: [
           { text: 'PJSK 相关功能', link: '/features/pjsk' },
@@ -59,13 +48,20 @@ export default defineConfig({
       {
         text: '关于与规范',
         items: [
-          { text: '贡献榜名单', link: '/contribution' },
-          { text: '群规与公告', link: '/rules' },
-          { text: '提问的智慧', link: '/asking' },
+          { text: '开发团队', link: '/contribution' },
           { text: '免责声明', link: '/disclaimer' },
           { text: '用户使用协议', link: '/agreement' },
+          { text: '群规与公告', link: '/rules' },
+          { text: '提问的智慧', link: '/asking' },
           { text: '赞助我们', link: '/sponsor' },
           { text: '赞助榜名单', link: '/sponsor_list' }
+        ]
+      },
+      {
+        text: '更新与公告',
+        items: [
+          { text: 'MC 服务器更新', link: '/features/mc_update' },
+          { text: 'Bot 更新日志', link: '/features/bot_update' }
         ]
       }
     ],
@@ -81,13 +77,6 @@ export default defineConfig({
           ]
         },
         {
-          text: '更新与公告',
-          items: [
-            { text: 'MC 服务器更新', link: '/features/mc_update' },
-            { text: 'Bot 更新日志', link: '/features/bot_update' }
-          ]
-        },
-        {
           text: '功能文档',
           items: [
             { text: 'PJSK 相关功能', link: '/features/pjsk' },
@@ -100,13 +89,20 @@ export default defineConfig({
         {
           text: '关于与规范',
           items: [
-            { text: '贡献榜名单', link: '/contribution' },
-            { text: '群规与公告', link: '/rules' },
-            { text: '提问的智慧', link: '/asking' },
+            { text: '开发团队', link: '/contribution' },
             { text: '免责声明', link: '/disclaimer' },
             { text: '用户使用协议', link: '/agreement' },
+            { text: '群规与公告', link: '/rules' },
+            { text: '提问的智慧', link: '/asking' },
             { text: '赞助我们', link: '/sponsor' },
             { text: '赞助榜名单', link: '/sponsor_list' }
+          ]
+        },
+        {
+          text: '更新与公告',
+          items: [
+            { text: 'MC 服务器更新', link: '/features/mc_update' },
+            { text: 'Bot 更新日志', link: '/features/bot_update' }
           ]
         }
       ]
