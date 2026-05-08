@@ -11,11 +11,9 @@ export default {
     const showAnnouncement = ref(true) 
 
     onMounted(() => {
-      // 🎲 首页随机头像逻辑
       const images = ['/Picture/avatar.jpg', '/Picture/logo.gif'];
       currentAvatar.value = images[Math.floor(Math.random() * images.length)];
 
-      // 💬 首页随机语录逻辑
       const quotes = [
         "「 ボクは……ボクでいたいだけ 」<br>我只是……想做我自己罢了",
         "「 秘密って、なんだかワクワクしない？ 」<br>所谓秘密，不觉得令人有些兴奋吗？",
@@ -24,14 +22,12 @@ export default {
       ];
       currentQuote.value = quotes[Math.floor(Math.random() * quotes.length)];
 
-      // 检查当前会话是否已关闭公告
       if (sessionStorage.getItem('hide_announcement')) {
         showAnnouncement.value = false;
       }
     })
 
     return h(DefaultTheme.Layout, null, {
-      // 1. 首页随机英雄区插槽
       'home-hero-image': () => {
         return h('div', { class: 'hero-wrapper' }, [
           h('img', { 
@@ -46,7 +42,6 @@ export default {
         ])
       },
 
-      // 2. 全局公告栏插槽 (固定右上角关闭按钮)
       'layout-top': () => {
         return showAnnouncement.value ? h('div', {
           style: {
@@ -58,6 +53,7 @@ export default {
             fontWeight: '500',
             borderBottom: '1px solid var(--vp-c-brand-soft)',
             position: 'relative',
+            zIndex: '999', // 修复重叠的关键属性
             lineHeight: '1.6'
           }
         }, [
@@ -85,7 +81,6 @@ export default {
               marginLeft: '4px'
             }
           }, '点击查看 →'),
-          // ✖ 关闭按钮：固定在右上角
           h('button', {
             onClick: () => {
               showAnnouncement.value = false;
@@ -108,7 +103,6 @@ export default {
         ]) : null
       },
 
-      // 3. 全局页脚插槽 (强制在所有页面底部显示)
       'layout-bottom': () => {
         return h('div', {
           style: {
