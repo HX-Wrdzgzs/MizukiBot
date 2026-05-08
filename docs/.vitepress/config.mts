@@ -14,7 +14,6 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: '专为 PJSK 与 舞萌 DX 玩家打造的一站式 Bot 助手' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://help.mizuki.top/' }],
-    // 关键微调：使用完整的绝对路径，提高外部软件抓取图片的成功率
     ['meta', { property: 'og:image', content: 'https://help.mizuki.top/Picture/banner.jpg' }], 
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Mizuki Bot 帮助文档' }],
@@ -34,6 +33,13 @@ export default defineConfig({
           { text: '如何使用', link: '/usage' },
           { text: '落雪绑定', link: '/bind' },
           { text: '问题反馈', link: '/feedback' }
+        ]
+      },
+      {
+        text: '更新与公告',
+        items: [
+          { text: 'MC 服务器更新', link: '/features/mc_update' },
+          { text: 'Bot 更新日志', link: '/features/bot_update' }
         ]
       },
       {
@@ -57,13 +63,6 @@ export default defineConfig({
           { text: '赞助我们', link: '/sponsor' },
           { text: '赞助榜名单', link: '/sponsor_list' }
         ]
-      },
-      {
-        text: '更新与公告',
-        items: [
-          { text: 'MC 服务器更新', link: '/features/mc_update' },
-          { text: 'Bot 更新日志', link: '/features/bot_update' }
-        ]
       }
     ],
 
@@ -75,6 +74,13 @@ export default defineConfig({
             { text: '如何使用', link: '/usage' },
             { text: '落雪绑定', link: '/bind' },
             { text: '问题反馈', link: '/feedback' }
+          ]
+        },
+        {
+          text: '更新与公告',
+          items: [
+            { text: 'MC 服务器更新', link: '/features/mc_update' },
+            { text: 'Bot 更新日志', link: '/features/bot_update' }
           ]
         },
         {
@@ -97,13 +103,6 @@ export default defineConfig({
             { text: '提问的智慧', link: '/asking' },
             { text: '赞助我们', link: '/sponsor' },
             { text: '赞助榜名单', link: '/sponsor_list' }
-          ]
-        },
-        {
-          text: '更新与公告',
-          items: [
-            { text: 'MC 服务器更新', link: '/features/mc_update' },
-            { text: 'Bot 更新日志', link: '/features/bot_update' }
           ]
         }
       ]
