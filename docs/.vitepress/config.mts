@@ -14,6 +14,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: '专为 PJSK 与 舞萌 DX 玩家打造的一站式 Bot 助手' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://help.mizuki.top/' }],
+    // 关键微调：使用完整的绝对路径，提高外部软件抓取图片的成功率
     ['meta', { property: 'og:image', content: 'https://help.mizuki.top/Picture/banner.jpg' }], 
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Mizuki Bot 帮助文档' }],
