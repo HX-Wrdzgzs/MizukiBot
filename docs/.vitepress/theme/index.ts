@@ -6,15 +6,10 @@ export default {
   extends: DefaultTheme,
   
   Layout() {
-    // Randomized quotes state (retained)
     const currentQuote = ref('')
-    
-    // **Requirement: Banner Reliable Visibility (Turn 1 style robust approach, Turn 3 visuals)**
-    // Reverting to the functional approach which avoids Vue component setup timing issues.
-    // Ensure solid bg and border are present.
     const showAnnouncement = ref(true) 
     
-    // The CSS overrides to inject when the banner is shown to force other elements down by 44px
+    // 强制修正其他组件偏移的样式
     const styleOverride = `
       .VPNav { top: 44px !important; transition: top 0.1s ease; }
       .VPLocalNav { top: calc(var(--vp-nav-height) + 44px) !important; transition: top 0.1s ease; }
@@ -23,15 +18,12 @@ export default {
     `;
 
     onMounted(() => {
-      // Check session storage FIRST to determine initial visibility
+      // 初始化检查是否已手动关闭公告
       if (sessionStorage.getItem('hide_announcement')) {
         showAnnouncement.value = false;
-      } else {
-        // Assert true initially. We will remove the randomization.
-        showAnnouncement.value = true;
       }
 
-      // Randomized quotes logic (retained)
+      // 随机语录逻辑
       const quotes = [
         "「 ボクは……ボクでいたいだけ 」<br>我只是……想做我自己罢了",
         "「 秘密って、なんだかワクワクしない？ 」<br>所谓秘密，不觉得令人有些兴奋吗？",
@@ -42,13 +34,11 @@ export default {
     })
 
     return h(DefaultTheme.Layout, null, {
-      // **Requirement: Fix the hero logo to P2, image_08 CEF7.png**
-      // (User positioned image_08 CEF7.png as P2 path verbatim).
+      // 首页 Hero 头像固定为 avatar.jpg
       'home-hero-image': () => {
         return h('div', { class: 'hero-wrapper' }, [
           h('img', { 
-            // Fixed path to P2 (image_08 CEF7.png verbatim), randomized avatar logic removed.
-            src: '/Picture/avatar.jpg'
+            src: '/Picture/avatar.jpg', 
             class: 'random-hero-avatar', 
             alt: 'Hero Logo'
           }),
@@ -59,23 +49,20 @@ export default {
         ])
       },
 
-      // **Requirement: Reliably show the branded, solid announcement bar**
+      // 置顶公告栏
       'layout-top': () => {
-        // Only return if visible
         if (!showAnnouncement.value) return null;
 
         return h('div', null, [
-          // 1. Inject Style Override (VitePress default Nav has higher priority usually)
           h('style', styleOverride),
-          // 2. Render reliably placed fixed-height bar (44px)
           h('div', {
             style: {
               position: 'fixed',
               top: '0',
               left: '0',
               width: '100%',
-              height: '44px', // Reliable fixed height approach
-              backgroundColor: 'var(--vp-c-bg)', // Turn 3: Prevent transparency by using solid background (black/white)
+              height: '44px',
+              backgroundColor: 'var(--vp-c-bg)', // 使用纯色背景防止透字
               color: 'var(--vp-c-brand-1)',
               display: 'flex',
               justifyContent: 'center',
@@ -83,9 +70,9 @@ export default {
               gap: '10px',
               fontSize: '14px',
               fontWeight: '500',
-              borderBottom: '2px solid var(--vp-c-brand-1)', // Turn 3: Branded solid bottom border
-              zIndex: '10000', // Highly positioned
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)' // Small shadow for visual logic
+              borderBottom: '2px solid var(--vp-c-brand-1)',
+              zIndex: '10000',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }
           }, [
             h('span', {
@@ -131,7 +118,7 @@ export default {
         ])
       },
 
-      // Forced footer logic Turn 3: solid requirements
+      // 全局页脚
       'layout-bottom': () => {
         return h('div', {
           style: {
