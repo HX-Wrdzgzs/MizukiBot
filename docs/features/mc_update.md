@@ -1,4 +1,7 @@
-# <img src="/Picture/Grass_Block_JE7_BE6.png" width="38" alt="草方块图标" style="vertical-align: middle; margin-right: 8px; margin-top: 0; margin-bottom: 0;"> Mizuki MC 更新公告
+<h1 style="display: flex; align-items: center; gap: 12px; margin-bottom: 30px; border-bottom: none;">
+  <img src="/Picture/Grass_Block_JE7_BE6.png" width="38" alt="草方块图标" style="margin: 0;">
+  <span>Mizuki MC 更新公告</span>
+</h1>
 
 <br>
 
