@@ -43,63 +43,76 @@ export default {
       },
 
       'layout-top': () => {
-        return showAnnouncement.value ? h('div', {
-          style: {
-            backgroundColor: 'var(--vp-c-brand-soft)',
-            color: 'var(--vp-c-brand-1)',
-            padding: '12px 40px 12px 15px', 
-            textAlign: 'center',
-            fontSize: '14px',
-            fontWeight: '500',
-            borderBottom: '1px solid var(--vp-c-brand-soft)',
-            position: 'relative',
-            zIndex: '999', // 修复重叠的关键属性
-            lineHeight: '1.6'
-          }
-        }, [
-          h('span', {
+        // 如果需要显示公告
+        return showAnnouncement.value ? h('div', null, [
+          // 1. 动态注入样式，将 VitePress 的核心组件整体向下推 44px
+          h('style', `
+            .VPNav { top: 44px !important; }
+            .VPSidebar { top: calc(var(--vp-nav-height) + 44px) !important; }
+            .VPLocalNav { top: calc(var(--vp-nav-height) + 44px) !important; }
+            .VPContent { margin-top: 44px !important; }
+          `),
+          // 2. 渲染固定的顶部公告栏
+          h('div', {
             style: {
-              backgroundColor: 'var(--vp-c-brand-1)',
-              color: 'white',
-              padding: '2px 8px',
-              borderRadius: '6px',
-              fontSize: '12px',
-              fontWeight: 'bold',
-              marginRight: '8px',
-              display: 'inline-block',
-              verticalAlign: 'middle'
-            }
-          }, '公告'),
-          h('span', { style: { verticalAlign: 'middle' } }, 'Mizuki Bot 4月大更新已上线，欢迎查阅更新日志！ '),
-          h('a', { 
-            href: '/features/bot_update',
-            style: {
-              textDecoration: 'underline',
-              fontWeight: 'bold',
+              position: 'fixed',
+              top: '0',
+              left: '0',
+              width: '100%',
+              height: '44px', // 锁定绝对高度
+              backgroundColor: 'var(--vp-c-brand-soft)',
               color: 'var(--vp-c-brand-1)',
-              verticalAlign: 'middle',
-              marginLeft: '4px'
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              fontSize: '14px',
+              fontWeight: '500',
+              borderBottom: '1px solid var(--vp-c-brand-soft)',
+              zIndex: '10000' // 确保在最顶层，不会被任何人遮挡
             }
-          }, '点击查看 →'),
-          h('button', {
-            onClick: () => {
-              showAnnouncement.value = false;
-              sessionStorage.setItem('hide_announcement', 'true');
-            },
-            style: {
-              position: 'absolute',
-              right: '12px',
-              top: '12px',
-              background: 'transparent',
-              border: 'none',
-              fontSize: '22px',
-              cursor: 'pointer',
-              color: 'var(--vp-c-brand-1)',
-              lineHeight: '1',
-              padding: '0'
-            },
-            ariaLabel: '关闭公告'
-          }, '×')
+          }, [
+            h('span', {
+              style: {
+                backgroundColor: 'var(--vp-c-brand-1)',
+                color: 'white',
+                padding: '2px 8px',
+                borderRadius: '6px',
+                fontSize: '12px',
+                fontWeight: 'bold',
+                marginRight: '8px'
+              }
+            }, '公告'),
+            h('span', null, 'Mizuki Bot 4月大更新已上线，欢迎查阅更新日志！ '),
+            h('a', { 
+              href: '/features/bot_update',
+              style: {
+                textDecoration: 'underline',
+                fontWeight: 'bold',
+                color: 'var(--vp-c-brand-1)',
+                marginLeft: '4px'
+              }
+            }, '点击查看 →'),
+            h('button', {
+              onClick: () => {
+                showAnnouncement.value = false;
+                sessionStorage.setItem('hide_announcement', 'true');
+              },
+              style: {
+                position: 'absolute',
+                right: '16px',
+                top: '50%',
+                transform: 'translateY(-50%)', // 绝对垂直居中
+                background: 'transparent',
+                border: 'none',
+                fontSize: '22px',
+                cursor: 'pointer',
+                color: 'var(--vp-c-brand-1)',
+                lineHeight: '1',
+                padding: '0'
+              },
+              ariaLabel: '关闭公告'
+            }, '×')
+          ])
         ]) : null
       },
 
