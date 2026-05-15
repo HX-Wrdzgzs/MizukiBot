@@ -1,3 +1,8 @@
+---
+title: Mizuki MC 更新公告
+description: Mizuki Minecraft 服务器的最新更新公告与周常维护日志，记录了 Fabric 版本升级、客户端整合包与服务端 Mod 的详细调整信息。
+---
+
 <h1 style="display: flex; align-items: center; border: none; margin-top: 0; margin-bottom: 30px;">
   <img src="/Picture/Grass_Block_JE7_BE6.png" style="width: 38px; height: 38px; margin: 0 12px 0 0; display: block;" alt="草方块图标">
   <span style="font-weight: bold; line-height: 1;">Mizuki MC 更新公告</span>
