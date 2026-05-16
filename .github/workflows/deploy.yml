@@ -1,53 +1,42 @@
-name: Deploy VitePress site to Pages
+name: Deploy to Cloudflare Pages
 
+# 触发条件：当主分支有代码推送时执行
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+    branches:
+      - main  # 如果你的默认分支是 master，请改为 master
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # VitePress 需要完整的 Git 历史来生成页面的“最后更新时间”
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          # 👇👇👇 注意：这里删除了 cache: npm 这一行，防止报错 👇👇👇
+          node-version: 20 # 推荐使用 Node 20
 
       - name: Install dependencies
-        run: npm install  # 确保这里是 npm install，不是 npm ci
+        # 如果你使用的是 pnpm 或 yarn，请修改这里的安装命令
+        run: npm install
 
-      - name: Build with VitePress
+      - name: Build VitePress site
+        # 你的 VitePress 构建命令
         run: npm run docs:build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          path: docs/.vitepress/dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mizuki-bot-docs # ⚠️ 改成你在 Cloudflare Pages 创建的项目名称
+          directory: docs/.vitepress/dist # VitePress 默认的输出目录
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
